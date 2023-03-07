@@ -1,0 +1,10 @@
+:root {
+    --footer-bg-color: #479fd6;
+    --footer-text-color: white;
+}
+
+.styled-footer {
+    font-size: 1.1rem;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
