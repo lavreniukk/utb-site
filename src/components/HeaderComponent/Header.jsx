@@ -97,7 +97,7 @@ function Header() {
                     </NavLink>
                 </NavItem>
                 <NavItem className='me-3 mb-3'>
-                    <NavLink to="/product" className={setActiveLink}>
+                    <NavLink to="/products" className={setActiveLink}>
                         Продукція
                     </NavLink>
                 </NavItem>

@@ -8,7 +8,7 @@
     --nav-catalogue-clicked: #4682A4;
 }
 
-.styled-navbar {
+nav.styled-navbar {
     box-shadow: 0px 5px 25px var(--nav-shadow-color);
     margin-bottom: 15px;
 }
@@ -38,7 +38,9 @@ button.dropdown-btn{
     transition: background-color 250ms ease-in-out;
 }
 
-button.dropdown-btn:hover {
+button.dropdown-btn:hover,
+button.dropdown-btn:focus
+button.dropdown-btn:active {
     background-color: var(--nav-catalogue-clicked);
 }
 
