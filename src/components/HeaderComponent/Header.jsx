@@ -35,12 +35,12 @@ function Header() {
         <Container>
             <Row>
             <Col>
-            <NavbarBrand href='/home' className='d-flex'>
+            <NavbarBrand href='/' className='d-flex'>
                 <img src='assets/utb-logo-1.png'/>
             </NavbarBrand>
             </Col>
             <Col>
-            <NavbarBrand href='/home' className='d-flex'>
+            <NavbarBrand href='/' className='d-flex'>
                 <img src='assets/utb-logo-2.png' className='ms-auto'/>
             </NavbarBrand>
             </Col>
@@ -92,7 +92,7 @@ function Header() {
             <Collapse className='d-md-flex justify-content-end' isOpen={isOpenNav} navbar>
             <Nav className='ms-3' navbar>
                 <NavItem className='me-3 mb-3'>
-                    <NavLink to="/home" className={setActiveLink}>
+                    <NavLink to="/" className={setActiveLink}>
                         Головна
                     </NavLink>
                 </NavItem>

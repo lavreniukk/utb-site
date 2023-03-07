@@ -1,14 +1,15 @@
 :root {
-    --nav-shadow-color: #429E9F;
-    --nav-link-line: #7FC8C7;
+    --nav-shadow-color: #70bceb;
+    --nav-catalogue-color: #479fd6;
+    --nav-link-line: #7fcdfa;
     --nav-link-color: #696969;
     --nav-link-hovered: #444444;
-    --nav-btn-clicked: #90cdcc9a;
-    --nav-catalogue-clicked: #378688;
+    --nav-btn-clicked: #73afd18c;
+    --nav-catalogue-clicked: #4682A4;
 }
 
 .styled-navbar {
-    box-shadow: 0px 5px 15px var(--nav-shadow-color);
+    box-shadow: 0px 5px 25px var(--nav-shadow-color);
     margin-bottom: 15px;
 }
 
@@ -19,7 +20,7 @@ a.navbar-brand {
 .navbar-brand > img {
     width: 45%;
     max-width: 225px;
-    min-width: 145px;
+    min-width: 140px;
 }
 
 .dropdown {
@@ -31,7 +32,7 @@ button.dropdown-btn{
     text-transform: uppercase;
     width: 100%;
     min-width: fit-content;
-    background-color: var(--nav-shadow-color);
+    background-color: var(--nav-catalogue-color);
     border: none;
     border-radius: 5px 5px 0 0;
     transition: background-color 250ms ease-in-out;
@@ -43,16 +44,17 @@ button.dropdown-btn:hover {
 
 div.dropdown-menu {
     width: 100%;
+    min-width: fit-content;
     border-radius: 0 0 10px 10px;
-    border: 1px solid var(--nav-link-line);
+    border: 1px solid var(--nav-catalogue-color);
 }
 
 @media (max-width: 767px) {
     button.dropdown-btn {
-        width: 70%;
+        width: 80%;
     }
     div.dropdown-menu {
-        width: 70%;
+        width: 80%;
     }
 }
 
