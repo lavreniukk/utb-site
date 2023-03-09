@@ -47,48 +47,48 @@ function Header() {
             </Row>
 
             <Row className='mt-3 d-flex justify-content-between' xs="2" md="2">
-            <Col className='ps-4' md="3">
+            <Col className='ps-4' xs="7" sm="5" md="3">
                 <Dropdown className='d-md-flex justify-content-start' isOpen={isOpenMenu} toggle={toggleMenu}>
                 <DropdownToggle className='dropdown-btn' style={{borderRadius: isOpenMenu ? '5px 5px 0 0' : '5px'}}>
                     Каталог
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 1
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 2
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 3
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 4
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 5
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 6
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 7
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 8
                     </DropdownItem>
-                    <DropdownItem onClick={function noRefCheck(){}}>
+                    <DropdownItem>
                         Категорія 9
                     </DropdownItem>
                 </DropdownMenu>
                 </Dropdown>
             </Col>
 
-            <Col className='d-md-none d-flex justify-content-end mb-3'> 
+            <Col xs="5" className='d-md-none d-flex justify-content-end mb-3'> 
                 <NavbarToggler className='styled-navbtn' onClick={toggleNav}/>
             </Col>
 
-            <Col md="9">
+            <Col xs="12" md="9">
             <Collapse className='d-md-flex justify-content-end' isOpen={isOpenNav} navbar>
             <Nav className='ms-3' navbar>
                 <NavItem className='me-3 mb-3'>
