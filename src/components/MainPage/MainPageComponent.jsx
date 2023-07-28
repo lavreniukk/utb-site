@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CarouselComponent from "./CarouselComponent";
 import './mainpagestyles.css';
 import CategoryCard from "../UIComponents/CategoryCard";

@@ -8,7 +8,6 @@ import {
     CardSubtitle
 } from "reactstrap";
 import './contactstyles.css';
-import { Link } from "react-router-dom";
 
 export default function Contact(props) {
     document.title = 'УТБ Ресурс - ' + props.title; 
