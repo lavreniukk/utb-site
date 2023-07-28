@@ -1,0 +1,56 @@
+:root {
+    --contact-icon-color: #479fd6;
+    --contact-link-line: #7fcdfa;
+    --contact-link-color: #696969;
+    --contact-link-hovered: #444444;
+}
+
+.styled-contact-card {
+    width: 100%; 
+    max-width: 450px;
+    transition: box-shadow 350ms ease-in-out;
+}
+
+.styled-contact-card:hover {
+    box-shadow: 0 0 20px var(--contact-link-hovered);
+    transition: box-shadow 350ms ease-in-out
+}
+
+.contact-icon {
+    height: 5vmax;
+    font-size: 5vmax;
+    color: var(--contact-icon-color);
+}
+
+.contact-link {
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--contact-link-color);
+    transition: color 350ms ease-in;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.contact-link:hover {
+    color: var(--contact-link-hovered);
+    transition: color 350ms ease-out;
+}
+
+.contact-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--contact-link-line);
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 350ms ease-in-out;
+}
+
+.contact-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
