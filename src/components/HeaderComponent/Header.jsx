@@ -36,12 +36,12 @@ function Header() {
             <Row>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='assets/utb-logo-1.png'/>
+                <img src='assets/images/utb-logo-1.png' alt='УТБ Ресурс'/>
             </NavbarBrand>
             </Col>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='assets/utb-logo-2.png' className='ms-auto'/>
+                <img src='assets/images/utb-logo-2.png' className='ms-auto' alt='Медичні технології заради життя'/>
             </NavbarBrand>
             </Col>
             </Row>

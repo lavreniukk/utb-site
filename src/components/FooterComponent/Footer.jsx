@@ -15,7 +15,7 @@ function Footer() {
             <Container>
                 <Row className="pb-3 d-flex justify-content-center" xs="1" md="2" lg="4">
                     <Col className="d-flex d-lg-block justify-content-center pb-4" md="12">
-                        <img className="logo-footer" src="/assets/utb-logo-footer.png"/>
+                        <img className="logo-footer" src="/assets/images/utb-logo-footer.png" alt='УТБ Ресурс'/>
                     </Col>
                     <Col className="text-center ">
                         <i className="fa-solid fa-envelope fa-lg me-2"/><span className="fw-bold"> Електронна пошта:</span>
