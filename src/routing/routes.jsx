@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../components/MainPage/MainPageComponent";
+import Home from "../pages/MainPage/MainPage";
 import { Layout } from "./layout";
-import Contact from "../components/ContactComponent/Contact";
-import About from "../components/AboutComponent/About";
-import Products from "../components/ProductsComponent/Products";
+import Contact from "../pages/ContactPage/Contact";
+import About from "../pages/AboutPage/About";
+import Products from "../pages/ProductsPage/Products";
 
 export const router = createBrowserRouter ([
     {

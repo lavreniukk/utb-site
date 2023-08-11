@@ -17,9 +17,14 @@
 }
 
 .contact-icon {
-    height: 5vmax;
-    font-size: 5vmax;
+    height: 4.5vmax;
+    font-size: 4.5vmax;
     color: var(--contact-icon-color);
+}
+
+.contact-span {
+    color: var(--contact-link-color);
+    font-size: 1.2vmax;
 }
 
 .contact-link {
@@ -29,6 +34,7 @@
     transition: color 350ms ease-in;
     position: relative;
     padding-bottom: 5px;
+    font-size: 1.2vmax;
 }
 
 .contact-link:hover {
@@ -53,4 +59,49 @@
 .contact-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+@media (max-width: 1199px) {
+    .contact-icon {
+        height: 5vmax;
+        font-size: 5vmax;
+    }
+
+    .contact-span {
+        font-size: 1.5vmax;
+    }
+    
+    .contact-link {
+        font-size: 1.5vmax;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact-icon {
+        height: 6vmax;
+        font-size: 6vmax;
+    }
+
+    .contact-span {
+        font-size: 2vmax;
+    }
+    
+    .contact-link {
+        font-size: 2vmax;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-icon {
+        height: 7vmax;
+        font-size: 7vmax;
+    }
+
+    .contact-span {
+        font-size: 2.5vmax;
+    }
+    
+    .contact-link {
+        font-size: 2.5vmax;
+    }
 }

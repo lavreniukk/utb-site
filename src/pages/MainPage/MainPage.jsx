@@ -1,8 +1,8 @@
 import React from "react";
-import CarouselComponent from "./CarouselComponent";
+import CarouselComponent from "../../components/Carousel/Carousel";
 import './mainpagestyles.css';
-import CategoryCard from "../UIComponents/CategoryCard";
-import Slider from "../UIComponents/SliderComponent/Slider";
+import CategoryCard from "../../components/CategoryCard/CategoryCard";
+import Slider from "../../components/Slider/Slider";
 import { Col, Container, Row } from "reactstrap";
 
 const carouselItems = [
@@ -57,10 +57,9 @@ const sliderImageSrc = [
     '/assets/images/wstech-logo.png', 
 ];
 
+
 export default function Home(props) {
     document.title = 'УТБ Ресурс - ' + props.title;
-
-    const popularCategories = popularCategoriesItems.map((item) => <Col><CategoryCard item={item}/></Col>);
 
     return (
         <>
@@ -69,7 +68,7 @@ export default function Home(props) {
             <h1 className="text-center text-uppercase mb-3">Популярні категорії</h1>
             <Container>
                 <Row className="d-flex justify-content-center p-3" xs='1' md='3'>
-                    {popularCategories}
+                    {popularCategoriesItems.map((item) => <Col key={item.title}><CategoryCard item={item}/></Col>)}
                 </Row>
             </Container>
         </section>

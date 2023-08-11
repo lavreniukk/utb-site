@@ -15,7 +15,22 @@ export default function Contact(props) {
         <div>
             <Container className="mb-5">
                 <h1 className="text-center text-uppercase mt-5 mb-5">Контакти</h1>
-                <Row xs="1" md="2">
+                <Row xs="1" md="3">
+                    <Col className="d-flex justify-content-center">
+                        <Card className='mb-3 styled-contact-card'>
+                            <CardBody>
+                                <div className="contact-icon d-flex justify-content-center mb-2">
+                                    <i className="fa-solid fa-home"></i>
+                                </div>
+                                <CardTitle tag='h4' className="text-center mb-4">
+                                    Адреса
+                                </CardTitle>
+                                <CardSubtitle tag='h5' className="mb-3">
+                                    <span className="contact-span">вул. Авдвдав Вадвіді 16</span>
+                                </CardSubtitle>
+                            </CardBody>
+                        </Card>
+                    </Col>
                     <Col className="d-flex justify-content-center">
                         <Card className='mb-3 styled-contact-card'>
                             <CardBody>

@@ -10,16 +10,13 @@ function Slider({items}) {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={50}
+        slidesPerView={1}
+        spaceBetween={75}
         loop={true}
         navigation={true}
         modules={[Pagination, Navigation]}
         className="mySwiper p-5 mb-5"
         breakpoints={{
-          576: {
-            slidesPerView: 1,
-          },
           768: {
             slidesPerView: 2,
           },
@@ -28,8 +25,8 @@ function Slider({items}) {
           },
         }}
       >
-        {items.map((item) => <SwiperSlide><img src={item} alt='alt'/></SwiperSlide>)}
-        {items.map((item) => <SwiperSlide><img src={item} alt='alt'/></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><img src={item} alt='alt'/></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><img src={item} alt='alt'/></SwiperSlide>)}
       </Swiper>
     </>
   );
