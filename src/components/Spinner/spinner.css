@@ -1,0 +1,29 @@
+:root {
+  --spinner-dark-color: #4682A4;
+  --spinner-light-color: #f3f3f3;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 8px solid var(--spinner-light-color);
+  border-top: 8px solid var(--spinner-dark-color);
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.container__loading-spinner {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}

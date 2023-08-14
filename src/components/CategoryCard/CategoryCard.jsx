@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
+import './categorycard.css';
 
 export default function CategoryCard({item}) {
   return (

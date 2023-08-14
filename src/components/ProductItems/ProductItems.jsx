@@ -1,9 +1,10 @@
 import React from 'react'
+import Spinner from '../Spinner/Spinner'
 
 function ProductItems({ products, loading }) {
     if (loading) {
         return (
-            <p>Loading...</p>
+            <Spinner></Spinner>
         )
     }
 
