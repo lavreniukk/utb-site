@@ -51,10 +51,10 @@ const popularCategoriesItems = [
 ]
 
 const sliderImageSrc = [
-    '/assets/images/tekno-logo.png', 
-    '/assets/images/burmeier-logo.png', 
-    '/assets/images/drmach-logo.png', 
-    '/assets/images/wstech-logo.png', 
+    '/assets/images/logos/tekno-logo.png', 
+    '/assets/images/logos/burmeier-logo.png', 
+    '/assets/images/logos/drmach-logo.png', 
+    '/assets/images/logos/wstech-logo.png', 
 ];
 
 
