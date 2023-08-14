@@ -1,5 +1,8 @@
 import React from 'react'
 import Spinner from '../Spinner/Spinner'
+import { Col, Container, Row } from 'reactstrap'
+import ProductCard from '../ProductCard/ProductCard'
+import './productitems.css';
 
 function ProductItems({ products, loading }) {
     if (loading) {
@@ -9,15 +12,17 @@ function ProductItems({ products, loading }) {
     }
 
     return (
-        <ul>
-        { 
-            products.map((product, index) => (
-            <li key={index}>
-                <h2>{product.name}</h2>
-            </li>
-            ))
-        }
-      </ul>
+        <Container className='container__products'>
+            <Row>
+            { 
+                products.map((product, index) => (
+                    <Col className='d-flex justify-content-center' key={index} xs="12" sm="6" md="4">
+                        <ProductCard product={product}/>
+                    </Col>
+                ))
+            }
+            </Row>
+        </Container>
     )
 }
 

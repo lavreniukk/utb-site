@@ -23,10 +23,15 @@ function Products({ title }) {
   const indexOfLastProduct = currentPage * productsOnPage;
   const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
   let currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-  const handlePaginationClick = (pageIndex) => setCurrentPage(pageIndex);
+  const handlePaginationClick = (pageIndex) => {
+    setCurrentPage(pageIndex);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
   return (
-    <div>
       <Container>
         <h1 className="text-center text-uppercase mt-5 mb-5">Продукція</h1>
         <ProductItems products={currentProducts} loading={loading} />
@@ -40,7 +45,6 @@ function Products({ title }) {
           />
         }
       </Container>
-    </div>
   )
 }
 
