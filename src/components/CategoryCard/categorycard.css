@@ -1,3 +1,8 @@
+:root {
+    --link-color: #696969;
+    --link-hovered: #444444;
+}
+
 .styled-card {
     border-radius: 15px !important;
     overflow: hidden;
@@ -5,15 +10,17 @@
 }
 
 .styled-card:hover {
-    box-shadow: 0 0 20px var(--main-link-hovered);
+    box-shadow: 0 0 20px var(--link-hovered);
     transition: box-shadow 350ms ease-in-out;
 }
 
 .category-link {
-    color: var(--main-link-color);
+    color: var(--link-color);
     font-size: large;
+    text-decoration: none;
 }
 
 .category-link:hover {
-    color: var(--main-link-hovered);
+    color: var(--link-hovered);
+    text-decoration: underline;
 }

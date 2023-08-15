@@ -2,31 +2,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Accordion from '../Accordion/Accordion';
 import { Container } from 'reactstrap';
+import './productfilter.css';
 
 function ProductFilter({categories, producers}) {
 
     return (
-        <Container className='d-flex flex-column'>
-        <h3>Категорії</h3>
+        <Container className='d-flex flex-column container__product-filter'>
+        <h3 className='product-filter__header'>Категорії</h3>
         {
             categories.map((category, index) => (
                 'secondaryCategory' in category ? 
                 <Accordion 
-                    header={<Link to={`/products/category/${category.mainCategory}`}>{category.mainCategory}</Link>} 
+                    header={<Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>{category.mainCategory}</Link>} 
                     body={
                         category.secondaryCategory.map((secondary, index) => (
-                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index}>{secondary}</Link>
+                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>{secondary}</Link>
                     ))}
                     key={index}
                 /> 
                 :
-                <Link to={`/products/category/${category.mainCategory}`} key={index}>{category.mainCategory}</Link>
+                <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>{category.mainCategory}</Link>
             ))
         }
-        <h3>Виробники</h3>
+        <h3 className='product-filter__header mt-2'>Виробники</h3>
         {
             producers.map((producer, index) => (
-                <Link to={`/products/producer/${producer.producerName}`} key={index}>{producer.producerName}</Link>
+                <Link to={`/products/producer/${producer.producerName}`} key={index} className='product-filter__link'>{producer.producerName}</Link>
             ))
         }
         </Container>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Card, CardBody, CardHeader, Collapse } from 'reactstrap';
+import './accordion.css';
 
 function Accordion({header, body}) {
     const [accordionOpen, setAccordionOpen] = useState(false);
@@ -9,10 +10,10 @@ function Accordion({header, body}) {
     }
 
     return (
-        <Card>
-            <CardHeader onClick={handleToggle}>{header}</CardHeader>
+        <Card className='accordion__container'>
+            <CardHeader className='accordion__header d-flex' onClick={handleToggle}>{header}<i className={accordionOpen ? 'fa-solid fa-chevron-down accordion__arrow arrow_clicked' : 'fa-solid fa-chevron-down accordion__arrow'}></i></CardHeader>
             <Collapse isOpen={accordionOpen}>
-            <CardBody className='d-flex flex-column'>
+            <CardBody className='d-flex flex-column accordion__body'>
                 {body}
             </CardBody>
             </Collapse>

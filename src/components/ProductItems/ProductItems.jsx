@@ -16,7 +16,7 @@ function ProductItems({ products, loading }) {
             <Row>
             { 
                 products.map((product, index) => (
-                    <Col className='d-flex justify-content-center' key={index} xs="12" sm="6" md="4">
+                    <Col className='d-flex justify-content-center' key={index} xs="12" sm="6" lg="4">
                         <ProductCard product={product}/>
                     </Col>
                 ))

@@ -14,8 +14,9 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './headerstyles.css';
+import categories from '../../constants/productCategories';
 
 const setActiveLink = ({isActive}) => isActive ? 'styled-navlink styled-navlink-active' : 'styled-navlink styled-navlink-inactive';
 
@@ -24,9 +25,7 @@ function Header() {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
 
     const toggleNav = () => setIsOpenNav(!isOpenNav);
-    const toggleMenu = () => {
-        setIsOpenMenu(!isOpenMenu);
-    }
+    const toggleMenu = () => setIsOpenMenu(!isOpenMenu);
 
     return (
         <Navbar className='styled-navbar' expand="md">
@@ -51,33 +50,15 @@ function Header() {
                     Каталог
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem>
-                        Категорія 1
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 2
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 3
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 4
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 5
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 6
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 7
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 8
-                    </DropdownItem>
-                    <DropdownItem>
-                        Категорія 9
-                    </DropdownItem>
+                    {
+                        categories.map((category, index) => (
+                            <Link to={`/products/category/${category.mainCategory}`} className='header__category-link'>
+                                <DropdownItem key={index}>
+                                    {category.mainCategory}
+                                </DropdownItem>
+                            </Link>
+                        ))
+                    }
                 </DropdownMenu>
                 </Dropdown>
             </Col>

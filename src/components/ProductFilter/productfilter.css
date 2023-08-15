@@ -1,0 +1,28 @@
+#root {
+    --product-filter-title: #444444;
+    --product-filter-header-arrow: #479fd6;
+    --product-filter-border: #d2d2d2;
+    --product-filter-link-color: #696969;
+    --product-filter-link-hovered: #444444;
+}
+
+.container__product-filter {
+    border: 1px solid var(--product-filter-border);
+    border-radius: 15px;
+    padding: 20px 15px;
+}
+
+.product-filter__header {
+    color: var(--product-filter-title);
+}
+
+.product-filter__link {
+    color: var(--product-filter-link-color);
+    font-size: large;
+    text-decoration: none;
+}
+
+.product-filter__link:hover {
+    color: var(--product-filter-link-hovered);
+    text-decoration: underline;
+}

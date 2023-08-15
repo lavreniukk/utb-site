@@ -1,0 +1,30 @@
+.container__products-page {
+    align-items: start;
+}
+
+.product-filter__toggler {
+    padding: 0.2rem 0.5rem !important;
+    border-radius: 0.35rem !important;
+}
+
+.product-filter__toggler:focus, 
+.product-filter__toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.product-filter__toggler:active {
+    background-color: var(--nav-btn-clicked);
+    transition: background-color 200ms ease-in-out;
+}
+
+.column__product-filter {
+    position: sticky;
+    top: 20px;
+}
+
+@media (max-width: 768px) {
+    .column__product-filter {
+        position: static;
+    }
+}
