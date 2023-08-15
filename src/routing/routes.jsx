@@ -24,15 +24,15 @@ export const router = createBrowserRouter ([
             },
             {
                 path: "/products",
-                element: <Products title={'Продукція'}/>,
+                element: <Products />,
             },
             {
                 path: "/products/category/:mainCategory/:secondaryCategory?",
-                element: <Products title={'Продукція - '}/>
+                element: <Products />
             },
             {
                 path: "/products/producer/:producerName",
-                element: <Products title={'Продукція - '}/>
+                element: <Products />
             }
         ],
     },

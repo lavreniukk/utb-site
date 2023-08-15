@@ -8,14 +8,15 @@ import scrollToTop from '../../utils/scrollToTop.js';
 import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
 import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
+import changeTitle from '../../utils/changeProductsPageTitle.js';
 
-function Products({ title }) {
-  document.title = 'УТБ Ресурс - ' + title;
+function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const productsOnPage = 6;
   const { mainCategory, secondaryCategory, producerName } = useParams();
+  changeTitle(mainCategory, producerName);
 
   useEffect(() => {
     const fetchData = async () => {
