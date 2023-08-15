@@ -26,6 +26,14 @@ export const router = createBrowserRouter ([
                 path: "/products",
                 element: <Products title={'Продукція'}/>,
             },
+            {
+                path: "/products/category/:mainCategory/:secondaryCategory?",
+                element: <Products title={'Продукція - '}/>
+            },
+            {
+                path: "/products/producer/:producerName",
+                element: <Products title={'Продукція - '}/>
+            }
         ],
     },
 ]);

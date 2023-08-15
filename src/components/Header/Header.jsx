@@ -25,7 +25,6 @@ function Header() {
 
     const toggleNav = () => setIsOpenNav(!isOpenNav);
     const toggleMenu = () => {
-
         setIsOpenMenu(!isOpenMenu);
     }
 
@@ -35,12 +34,12 @@ function Header() {
             <Row>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='assets/images/utb/utb-logo-1.png' alt='УТБ Ресурс'/>
+                <img src='/assets/images/utb/utb-logo-1.png' alt='УТБ Ресурс'/>
             </NavbarBrand>
             </Col>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='assets/images/utb/utb-logo-2.png' className='ms-auto' alt='Медичні технології заради життя'/>
+                <img src='/assets/images/utb/utb-logo-2.png' className='ms-auto' alt='Медичні технології заради життя'/>
             </NavbarBrand>
             </Col>
             </Row>

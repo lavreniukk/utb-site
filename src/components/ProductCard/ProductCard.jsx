@@ -5,9 +5,9 @@ import './productcard.css';
 function ProductCard({product}) {
   return (
     <Card className='product-card'>
-        <CardImg className='product-card__img' src='assets/images/category-beds.jpg' alt={product.name}/>
+        <CardImg className='product-card__img' src='/assets/images/category-beds.jpg' alt={product.name}/>
         <CardBody className='product-card__body'>
-            <CardTitle tag='h4' className='product-card__title'>{product.name}</CardTitle>
+            <CardTitle tag='h4' className='product-card__title'>{product.name} {product.producerName} {product.mainCategory}</CardTitle>
             <Button className='product-card__btn'>Детальніше</Button>
         </CardBody>
     </Card>

@@ -1,5 +1,5 @@
 import { db } from '../firebase/initializer';
-import { collection, getDocs, query } from 'firebase/firestore/lite';
+import { collection, getDocs, query, where } from 'firebase/firestore/lite';
 
 const fetchProducts = async () => {
     try {
@@ -20,4 +20,30 @@ const fetchProducts = async () => {
     }
 }
 
-export default fetchProducts;
+const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerName) => {
+  try {
+    let queryRef = query(collection(db, 'products'));
+
+    if (mainCategory) {
+      queryRef = query(queryRef, where('mainCategory', '==', mainCategory));
+    }
+
+    if (secondaryCategory) {
+      queryRef = query(queryRef, where('secondaryCategory', '==', secondaryCategory));
+    }
+
+    if (producerName) {
+      queryRef = query(queryRef, where('producerName', '==', producerName));
+    }
+
+    const productSnapshot = await getDocs(queryRef);
+    const productsData = productSnapshot.docs.map(doc => doc.data());
+
+    return productsData;
+  } catch (error) {
+    console.error('Error fetching products: ', error);
+    return [];
+  }
+}
+
+export { fetchProducts, fetchFilteredProducts };
