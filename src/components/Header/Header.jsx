@@ -52,8 +52,8 @@ function Header() {
                 <DropdownMenu>
                     {
                         categories.map((category, index) => (
-                            <Link to={`/products/category/${category.mainCategory}`} className='header__category-link'>
-                                <DropdownItem key={index}>
+                            <Link key={index} to={`/products/category/${category.mainCategory}`} className='header__category-link'>
+                                <DropdownItem>
                                     {category.mainCategory}
                                 </DropdownItem>
                             </Link>

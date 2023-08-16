@@ -5,9 +5,16 @@ import 'swiper/css/thumbs';
 import './productimageslider.css';
 import { Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Button } from 'reactstrap';
 
 function ProductImageSlider({ imagesSrcArray }) {
     const [activeThumb, setActiveThumb] = useState(null);
+    const [isFullscreenOpen, setIsFullsrennOpen] = useState(false);
+
+    const handleFullscreenOpen = (index) => {
+        setActiveThumb(index);
+        setIsFullsrennOpen(!isFullscreenOpen);
+    }
 
     return (
         <div className='product-image-slider__container'>
@@ -22,7 +29,7 @@ function ProductImageSlider({ imagesSrcArray }) {
         >
             {
                 imagesSrcArray.map((image, index) => (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} onClick={() => handleFullscreenOpen(index)}>
                         <img src={image.src} className='product-image-slider__image' alt='product images'/>
                     </SwiperSlide>
                 ))
@@ -46,33 +53,29 @@ function ProductImageSlider({ imagesSrcArray }) {
             ))
         }
         </Swiper>
+        {
+            isFullscreenOpen && (
+                <div className='fullsreen-slider'>
+                    <Button className='fullsreen-slider__close-btn' onClick={() => setIsFullsrennOpen(false)}>X</Button>
+                    <Swiper
+                        initialSlide={activeThumb}
+                        loop={true}
+                        navigation={true}
+                        modules={[Navigation, Thumbs]}
+                        grabCursor={true}
+                        speed={800}
+                    >
+                    { imagesSrcArray.map((image, index) => (
+                        <SwiperSlide key={index}>
+                            <img src={image.src} className='fullscreen-slider__image' alt='product images'/>
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
+                </div>
+            )
+        }
         </div>
     )
 }
-
-// <div>
-        //     <div>
-        //         <img src={chosenImg.src} alt='Обране фото'></img>
-        //         <div className='image-slider__arrows'>
-        //             <i></i>
-        //             <i></i>
-        //          </div>
-        //     </div>
-        //     <div className='d-flex flex-row image-slider__previews'>
-        //         {
-        //             imagesSrcArray.map((image, index) => (
-        //                 <img 
-        //                     className={chosenImg === image ? 'image-slider__chosen-image' : ''}
-        //                     key={index} 
-        //                     src={image.src} 
-        //                     alt='Другорядні фото' 
-        //                     height={100} 
-        //                     width={100} 
-        //                     onClick={() => handleImageClick(image)}
-        //                 />
-        //             ))
-        //         }  
-        //     </div>
-        // </div>
 
 export default ProductImageSlider
