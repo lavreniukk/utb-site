@@ -27,14 +27,19 @@
 }
 
 .product-card__btn {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
     background-color: var(--product-card-btn) !important;
     transition: background-color 250ms ease-in-out;
     border: none !important;
+    border-radius: 5px;
 }
 
 .product-card__btn:hover,
 .product-card__btn:active,
 .product-card__btn:focus {
+    color: white;
     background-color: var(--product-card-btn-click) !important;
 }
 

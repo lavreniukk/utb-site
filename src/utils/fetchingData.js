@@ -1,5 +1,5 @@
 import { db } from '../firebase/initializer';
-import { collection, getDocs, query, where } from 'firebase/firestore/lite';
+import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore/lite';
 
 const fetchProducts = async () => {
     try {
@@ -10,8 +10,8 @@ const fetchProducts = async () => {
       //const offset = (currentPage - 1) * productsOnPage;
       //queryRef = query(queryRef, limit(productsOnPage), startAt(offset));
 
-      const productSnapshot = await getDocs(queryRef);
-      const productsData = productSnapshot.docs.map(doc => {
+      const productsSnapshot = await getDocs(queryRef);
+      const productsData = productsSnapshot.docs.map(doc => {
         return {
           id: doc.id,
           ...doc.data()
@@ -41,8 +41,8 @@ const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerNa
       queryRef = query(queryRef, where('producerName', '==', producerName));
     }
 
-    const productSnapshot = await getDocs(queryRef);
-    const productsData = productSnapshot.docs.map(doc => {
+    const productsSnapshot = await getDocs(queryRef);
+    const productsData = productsSnapshot.docs.map(doc => {
       return {
         id: doc.id,
         ...doc.data()
@@ -56,4 +56,21 @@ const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerNa
   }
 }
 
-export { fetchProducts, fetchFilteredProducts };
+const fetchProductById = async (productId) => {
+  try {
+    let queryRef = query(doc(db, 'products', productId));
+
+    const productSnapshot = await getDoc(queryRef);
+    const productData = { 
+      id: productSnapshot.id,
+      ...productSnapshot.data()
+    };
+
+    return productData;
+  } catch (error) {
+    console.error('Error fetching products: ', error);
+    return {};
+  }
+}
+
+export { fetchProducts, fetchFilteredProducts, fetchProductById };

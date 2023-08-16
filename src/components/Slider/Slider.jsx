@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './sliderstyles.css';
+import { Link } from 'react-router-dom';
 
 function Slider({items}) {
   return (
@@ -25,8 +26,8 @@ function Slider({items}) {
           },
         }}
       >
-        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><img src={item} alt='alt'/></SwiperSlide>)}
-        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><img src={item} alt='alt'/></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt'/></Link></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt'/></Link></SwiperSlide>)}
       </Swiper>
     </>
   );

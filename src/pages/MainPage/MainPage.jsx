@@ -22,7 +22,7 @@ const carouselItems = [
 
 const popularCategoriesItems = [
     {
-        src: 'assets/images/category-chairs.jpg',
+        src: '/assets/images/category-chairs.jpg',
         title: 'Медицинські крісла',
         categories: [
             'Гінекологічні',
@@ -31,7 +31,7 @@ const popularCategoriesItems = [
         ]
     },
     {
-        src: 'assets/images/category-tables.jpg',
+        src: '/assets/images/category-tables.jpg',
         title: 'Медицинські столи',
         categories: [
             'Операційні',
@@ -40,7 +40,7 @@ const popularCategoriesItems = [
         ]
     },
     {
-        src: 'assets/images/category-beds.jpg',
+        src: '/assets/images/category-beds.jpg',
         title: 'Загальнолікарняне обладнання',
         categories: [
             'Ліжка',
@@ -51,10 +51,10 @@ const popularCategoriesItems = [
 ]
 
 const sliderImageSrc = [
-    '/assets/images/logos/tekno-logo.png', 
-    '/assets/images/logos/burmeier-logo.png', 
-    '/assets/images/logos/drmach-logo.png', 
-    '/assets/images/logos/wstech-logo.png', 
+    {link: '/products/producer/Tekno', imageSrc: '/assets/images/logos/tekno-logo.png'},
+    {link: '/products/producer/Burmeier', imageSrc: '/assets/images/logos/burmeier-logo.png'}, 
+    {link: '/products/producer/Dr.Mach', imageSrc: '/assets/images/logos/drmach-logo.png'}, 
+    {link: '/products/producer/WSTECH', imageSrc: '/assets/images/logos/wstech-logo.png'}, 
 ];
 
 
