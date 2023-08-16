@@ -11,7 +11,12 @@ const fetchProducts = async () => {
       //queryRef = query(queryRef, limit(productsOnPage), startAt(offset));
 
       const productSnapshot = await getDocs(queryRef);
-      const productsData = productSnapshot.docs.map(doc => doc.data());
+      const productsData = productSnapshot.docs.map(doc => {
+        return {
+          id: doc.id,
+          ...doc.data()
+        }
+      });
 
       return productsData;
     } catch (error) {
@@ -37,7 +42,12 @@ const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerNa
     }
 
     const productSnapshot = await getDocs(queryRef);
-    const productsData = productSnapshot.docs.map(doc => doc.data());
+    const productsData = productSnapshot.docs.map(doc => {
+      return {
+        id: doc.id,
+        ...doc.data()
+      }
+    });
 
     return productsData;
   } catch (error) {
