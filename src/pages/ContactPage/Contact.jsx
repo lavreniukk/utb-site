@@ -9,8 +9,8 @@ import {
 } from "reactstrap";
 import './contactstyles.css';
 
-export default function Contact(props) {
-    document.title = 'УТБ Ресурс - ' + props.title; 
+export default function Contact({title}) {
+    document.title = 'УТБ Ресурс - ' + title; 
     return (
         <div>
             <Container className="mb-5">

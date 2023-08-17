@@ -4,62 +4,12 @@ import './mainpagestyles.css';
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import Slider from "../../components/Slider/Slider";
 import { Col, Container, Row } from "reactstrap";
+import sliderImageSrc from "../../constants/mainPageProducerSlider";
+import popularCategoriesItems from "../../constants/popularCategories";
+import carouselItems from "../../constants/mainPageCarousel";
 
-const carouselItems = [
-    {
-        src: 'assets/images/carousel-item-1.jpg',
-        key: 1,
-    },
-    {
-        src: 'assets/images/carousel-item-2.jpg',
-        key: 2,
-    },
-    {
-        src: 'assets/images/carousel-item-3.jpg',
-        key: 3,
-    },
-];
-
-const popularCategoriesItems = [
-    {
-        src: '/assets/images/category-chairs.jpg',
-        title: 'Медицинські крісла',
-        categories: [
-            'Гінекологічні',
-            'Для забору крові',
-            'Універсальні'
-        ]
-    },
-    {
-        src: '/assets/images/category-tables.jpg',
-        title: 'Медицинські столи',
-        categories: [
-            'Операційні',
-            'Реабілітаційні',
-            'Столики'
-        ]
-    },
-    {
-        src: '/assets/images/category-beds.jpg',
-        title: 'Загальнолікарняне обладнання',
-        categories: [
-            'Ліжка',
-            'Стійки',
-            'Візки'
-        ]
-    },
-]
-
-const sliderImageSrc = [
-    {link: '/products/producer/Tekno', imageSrc: '/assets/images/logos/tekno-logo.png'},
-    {link: '/products/producer/Burmeier', imageSrc: '/assets/images/logos/burmeier-logo.png'}, 
-    {link: '/products/producer/Dr.Mach', imageSrc: '/assets/images/logos/drmach-logo.png'}, 
-    {link: '/products/producer/WSTECH', imageSrc: '/assets/images/logos/wstech-logo.png'}, 
-];
-
-
-export default function Home(props) {
-    document.title = 'УТБ Ресурс - ' + props.title;
+export default function Home({title}) {
+    document.title = 'УТБ Ресурс - ' + title;
 
     return (
         <>

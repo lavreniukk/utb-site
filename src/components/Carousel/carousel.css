@@ -1,0 +1,33 @@
+.carousel-item-1 {
+    object-position: center 10%;
+}
+
+.carousel-item-2 {
+    object-position: center 90%;
+}
+
+.carousel-item-3 {
+    object-position: center 55%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #479fd6;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .carousel-item-2 {
+        object-position: 65% 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item-2 {
+        object-position: 60% bottom;
+    }
+    .carousel-item-1 {
+        object-position: 30%;
+    }
+}
