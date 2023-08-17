@@ -7,6 +7,7 @@ import ProductImageSlider from '../../components/ProductImageSlider/ProductImage
 import characteristicNames from '../../constants/characteristicNames';
 import './productdetail.css';
 import ColorPalette from '../../components/ColorPallete/ColorPalette';
+import producerImage from '../../constants/producerImage';
 
 function ProductDetailPage() {
     const [product, setProduct] = useState({});
@@ -58,9 +59,10 @@ function ProductDetailPage() {
                             {product.description}
                         </p> 
                         <h4 className='blue-left'>Виробник</h4>
-                        <p>
-                            <Link className='product-detail__link' to={`/products/producer/${product.producerName}`}>{product.producerName}</Link>
-                        </p>
+                        <Link className='product-detail__link d-flex flex-column mb-3' to={`/products/producer/${product.producerName}`}>
+                            {product.producerName}
+                            <img src={producerImage[product.producerName]} alt={product.producerName} width='50%'/>
+                        </Link>
                         <h4 className='blue-left'>Категорія</h4>
                         <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{product.mainCategory}</Link>
                         {
@@ -84,9 +86,8 @@ function ProductDetailPage() {
                 ))
             }
             </div>
-            
             {
-                true && 
+                product.hasColorPalette && 
                 <>
                     <h2 className='text-center mb-3'>Кольорова палітра</h2>
                     <ColorPalette />
