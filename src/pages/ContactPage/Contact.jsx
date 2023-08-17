@@ -26,7 +26,7 @@ export default function Contact(props) {
                                     Адреса
                                 </CardTitle>
                                 <CardSubtitle tag='h5' className="mb-3">
-                                    <span className="contact-span">вул. Авдвдав Вадвіді 16</span>
+                                    <span className="contact-span">м Київ, вул. В. Алексухіна 24, оф. 6</span>
                                 </CardSubtitle>
                             </CardBody>
                         </Card>
@@ -41,7 +41,7 @@ export default function Contact(props) {
                                     Електронна пошта
                                 </CardTitle>
                                 <CardSubtitle tag='h5' className="mb-3">
-                                    <a href="mailto: email.example@gmail.com" className="contact-link">email.example@gmail.com</a>
+                                    <a href="mailto: info@utbresurs.com.ua" className="contact-link">info@utbresurs.com.ua</a>
                                 </CardSubtitle>
                             </CardBody>
                         </Card>
@@ -56,7 +56,7 @@ export default function Contact(props) {
                                     Номер телефону
                                 </CardTitle>
                                 <CardSubtitle tag='h5' className="mb-3">
-                                    <a href="tel:+380667065896" className="contact-link">+38 (066) 123 45 67</a>
+                                    <a href="tel:+380672433848" className="contact-link">+38 (067) 243 38 48</a>
                                 </CardSubtitle>
                             </CardBody>
                         </Card>
