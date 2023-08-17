@@ -39,7 +39,7 @@ function ProductImageSlider({ imagesSrcArray }) {
             onSwiper={setActiveThumb}
             loop={true}
             spaceBetween={10}
-            slidesPerView={3}
+            slidesPerView={imagesSrcArray.length >= 3 ? 3 : imagesSrcArray.length}
             modules={[Navigation, Thumbs]}
             className='product-image-slider__thumbs'
         >

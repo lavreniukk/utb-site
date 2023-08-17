@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Col, Container, Row } from 'reactstrap'
 import { fetchProductById } from '../../utils/fetchingData';
 import Spinner from '../../components/Spinner/Spinner';
 import ProductImageSlider from '../../components/ProductImageSlider/ProductImageSlider';
 import characteristicNames from '../../constants/characteristicNames';
 import './productdetail.css';
+import ColorPalette from '../../components/ColorPallete/ColorPalette';
 
 function ProductDetailPage() {
     const [product, setProduct] = useState({});
@@ -40,46 +41,55 @@ function ProductDetailPage() {
     }
 
     return (
-        <Container className='mt-5 mb-5'>
-            <Row>
+        <Container className='mt-5'>
+            <Row className='mb-5'>
                 <Col xs="12" sm="12" md="7">
                     <ProductImageSlider imagesSrcArray={images}/>
                 </Col>
-                <Col xs="12" sm="12" md="5">
+                <Col xs="12" sm="12" md="5" className='ps-5 pe-5'>
                     <Row className='mb-3'>
-                        <h2>{product.name}</h2>
-                        <span>артикул АА-4389 {product.article}</span>  
+                        <h2 className='product-detail__product-name'>{product.name}</h2>
+                        <span className='product-detail__product-article'> АА-4389 {product.article}</span>  
                     </Row>
                     <Row>
-                       <h4>Опис</h4>
+                       <h4 className='blue-left'>Опис</h4>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempor lacus sed consectetur volutpat. Nullam sollicitudin tincidunt mi id mollis. Aliquam hendrerit aliquam lacus et ornare. Proin efficitur tincidunt suscipit. Aenean pharetra ornare eros id sollicitudin. Duis non sagittis arcu, sed iaculis lectus. Nunc a ipsum nec sem dapibus faucibus non vitae leo. In placerat accumsan neque id semper. In non nibh id magna pellentesque rhoncus vel a magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu condimentum metus. In venenatis condimentum erat, non vulputate eros porta at. Sed tincidunt tortor eros. Nullam vel enim nec velit mollis tincidunt.
                             {product.description}
                         </p> 
-                        <h4>Виробник</h4>
+                        <h4 className='blue-left'>Виробник</h4>
                         <p>
-                            {product.producerName}
+                            <Link className='product-detail__link' to={`/products/producer/${product.producerName}`}>{product.producerName}</Link>
                         </p>
-                        <h4>Категорія</h4>
-                        <p>
-                            {product.mainCategory}
-                        </p>
+                        <h4 className='blue-left'>Категорія</h4>
+                        <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{product.mainCategory}</Link>
+                        {
+                            product.secondaryCategory && 
+                            <>
+                                <h4 className='blue-left'>Підкатегорія</h4>
+                                <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{product.secondaryCategory}</Link>
+                            </>
+                        }
                     </Row>
                 </Col>
             </Row>
-            <h4 className='text-center'>Характеристики</h4>
-            {
+            <h2 className='text-center mb-3'>Характеристики</h2>
+            <div className='d-flex flex-column mb-5'>
+                {
                 Object.keys(product.characteristics).map((key, index) => (
-                    <div className='characteristic__wrapper' key={index}>
+                    <div className='characteristic__wrapper d-flex mb-2' key={index}>
                         <span className='characteristic__name me-3'>{characteristicNames[key]}</span>
                         <span className='characteristic__value'>{product.characteristics[key]}</span>
                     </div>
                 ))
             }
+            </div>
+            
             {
                 true && 
                 <>
-                    <h4 className='text-center'>Кольорова палітра</h4>
+                    <h2 className='text-center mb-3'>Кольорова палітра</h2>
+                    <ColorPalette />
                 </>
             }
         </Container>
