@@ -1,4 +1,5 @@
-import { db } from '../firebase/initializer';
+import { getDownloadURL, ref } from 'firebase/storage';
+import { db, storage } from '../firebase/initializer';
 import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore/lite';
 
 const fetchProducts = async () => {
@@ -73,4 +74,19 @@ const fetchProductById = async (productId) => {
   }
 }
 
-export { fetchProducts, fetchFilteredProducts, fetchProductById };
+const fetchImagesUrls = async (images) => {
+  const promises = images.map((image) => {
+    const imageRef = ref(storage, image.src);
+    return getDownloadURL(imageRef);
+  });
+
+  try {
+    const urls = await Promise.all(promises);
+    return urls;
+  } catch (error) {
+    console.error('Error fetching image URLs:', error);
+    return [];
+  }
+};
+
+export { fetchProducts, fetchFilteredProducts, fetchProductById, fetchImagesUrls };

@@ -1,18 +1,18 @@
 const carouselItems = [
     {
-        src: '/assets/images/carousel-item-1.jpeg',
+        src: 'images/mainpage/carousel-item-1.jpg',
         key: 1,
-        class: 'carousel-item-1'
+        class: 'carousel-item-1',
     },
     {
-        src: '/assets/images/carousel-item-2.jpeg',
+        src: 'images/mainpage/carousel-item-2.jpg',
         key: 2,
-        class: 'carousel-item-2'
+        class: 'carousel-item-2',
     },
     {
-        src: '/assets/images/carousel-item-3.jpeg',
+        src: 'images/mainpage/carousel-item-3.jpg',
         key: 3,
-        class: 'carousel-item-3'
+        class: 'carousel-item-3',
     },
 ];
 
