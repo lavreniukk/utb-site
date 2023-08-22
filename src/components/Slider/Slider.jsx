@@ -26,8 +26,8 @@ function Slider({items}) {
           },
         }}
       >
-        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt'/></Link></SwiperSlide>)}
-        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt'/></Link></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt' loading='lazy'/></Link></SwiperSlide>)}
+        {items.map((item) => <SwiperSlide key={items.indexOf(item)}><Link to={item.link}><img src={item.imageSrc} alt='alt' loading='lazy'/></Link></SwiperSlide>)}
       </Swiper>
     </>
   );

@@ -37,7 +37,7 @@ function Products() {
       setProducts(fetchedProducts);
       setLoading(false);
     };
-
+    scrollToTop();
     fetchData();
   }, [mainCategory, secondaryCategory, producerName]);
 

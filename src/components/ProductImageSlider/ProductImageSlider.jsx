@@ -30,7 +30,7 @@ function ProductImageSlider({ imagesSrcArray }) {
             {
                 imagesSrcArray.map((image, index) => (
                     <SwiperSlide key={index} onClick={() => handleFullscreenOpen(index)}>
-                        <img src={image.src} className='product-image-slider__image' alt='product images'/>
+                        <img src={image.src} className='product-image-slider__image' alt='product images' loading='lazy'/>
                     </SwiperSlide>
                 ))
             }
@@ -47,7 +47,7 @@ function ProductImageSlider({ imagesSrcArray }) {
             imagesSrcArray.map((image, index) => (
                 <SwiperSlide key={index}>
                     <div className='thumbs__img-wrapper'>
-                        <img src={image.src} className='thumbs__image' alt='product images'/>
+                        <img src={image.src} className='thumbs__image' alt='product images' loading='lazy'/>
                     </div>
                 </SwiperSlide>
             ))
@@ -67,7 +67,7 @@ function ProductImageSlider({ imagesSrcArray }) {
                     >
                     { imagesSrcArray.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <img src={image.src} className='fullscreen-slider__image' alt='product images'/>
+                            <img src={image.src} className='fullscreen-slider__image' alt='product images' loading='lazy'/>
                         </SwiperSlide>
                     ))}
                     </Swiper>

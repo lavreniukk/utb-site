@@ -62,7 +62,7 @@ function ProductDetailPage() {
                         <h4 className='blue-left'>Виробник</h4>
                         <Link className='product-detail__link d-flex flex-column mb-3' to={`/products/producer/${product.producerName}`}>
                             {product.producerName}
-                            <img src={producerImage[product.producerName]} alt={product.producerName} width='50%'/>
+                            <img src={producerImage[product.producerName]} alt={product.producerName} width='50%' loading='lazy'/>
                         </Link>
                         <h4 className='blue-left'>Категорія</h4>
                         <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link>

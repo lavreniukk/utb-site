@@ -11,6 +11,7 @@ export default function CategoryCard({item}) {
         <img
             alt='alt'
             src={item.src}
+            loading='lazy'
         />
         <CardBody>
             <CardTitle tag='h4'>

@@ -35,7 +35,7 @@ export default function CarouselComponent({carouselItems}) {
             onExiting={() => setAnimate(true)}
             onExited={() => setAnimate(false)}
         >
-            <img src={slide.src} alt='alt' className={`carousel-img ${slide.class}`}/>
+            <img src={slide.src} alt='alt' className={`carousel-img ${slide.class}`} loading='lazy'/>
             <CarouselCaption 
                 captionText='text'
                 captionHeader='HEADER'
