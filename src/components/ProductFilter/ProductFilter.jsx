@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Accordion from '../Accordion/Accordion';
 import { Container } from 'reactstrap';
+import categoriesNames from '../../constants/categoriesNames';
 import './productfilter.css';
 
 function ProductFilter({categories, producers}) {
-
     return (
         <Container className='d-flex flex-column container__product-filter'>
         <h3 className='product-filter__header'>Категорії</h3>
@@ -13,15 +13,23 @@ function ProductFilter({categories, producers}) {
             categories.map((category, index) => (
                 'secondaryCategory' in category ? 
                 <Accordion 
-                    header={<Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>{category.mainCategory}</Link>} 
+                    header={
+                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>
+                            {categoriesNames.get(category.mainCategory)}
+                        </Link>
+                    } 
                     body={
                         category.secondaryCategory.map((secondary, index) => (
-                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>{secondary}</Link>
+                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>
+                            {categoriesNames.get(secondary)}
+                        </Link>
                     ))}
                     key={index}
                 /> 
                 :
-                <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>{category.mainCategory}</Link>
+                <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>
+                    {categoriesNames.get(category.mainCategory)}
+                </Link>
             ))
         }
         <h3 className='product-filter__header mt-2'>Виробники</h3>

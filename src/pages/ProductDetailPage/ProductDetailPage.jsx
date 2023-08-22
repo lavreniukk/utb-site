@@ -8,6 +8,7 @@ import characteristicNames from '../../constants/characteristicNames';
 import './productdetail.css';
 import ColorPalette from '../../components/ColorPallete/ColorPalette';
 import producerImage from '../../constants/producerImage';
+import categoriesNames from '../../constants/categoriesNames';
 
 function ProductDetailPage() {
     const [product, setProduct] = useState({});
@@ -64,12 +65,12 @@ function ProductDetailPage() {
                             <img src={producerImage[product.producerName]} alt={product.producerName} width='50%'/>
                         </Link>
                         <h4 className='blue-left'>Категорія</h4>
-                        <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{product.mainCategory}</Link>
+                        <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link>
                         {
                             product.secondaryCategory && 
                             <>
                                 <h4 className='blue-left'>Підкатегорія</h4>
-                                <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{product.secondaryCategory}</Link>
+                                <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{categoriesNames.get(product.secondaryCategory)}</Link>
                             </>
                         }
                     </Row>

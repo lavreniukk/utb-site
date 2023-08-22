@@ -2,9 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
 import './categorycard.css';
+import categoriesNames from '../../constants/categoriesNames';
 
 export default function CategoryCard({item}) {
   return (
+    <Link className='category-link' to={`/products/category/${item.title}`}>
     <Card className='mb-3 styled-card'>
         <img
             alt='alt'
@@ -12,14 +14,10 @@ export default function CategoryCard({item}) {
         />
         <CardBody>
             <CardTitle tag='h4'>
-                {item.title}
+                {categoriesNames.get(item.title)}
             </CardTitle>
-            {item.categories.map((category) => 
-                <CardSubtitle key={category}>
-                    <Link className='category-link'>{category}</Link>
-                </CardSubtitle>
-            )}
         </CardBody>
     </Card>
+    </Link>
   )
 };

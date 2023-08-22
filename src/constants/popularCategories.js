@@ -1,30 +1,15 @@
 const popularCategoriesItems = [
     {
         src: '/assets/images/category-chairs.jpg',
-        title: 'Медицинські крісла',
-        categories: [
-            'Гінекологічні',
-            'Для забору крові',
-            'Універсальні'
-        ]
+        title: 'gynecological-chairs',
     },
     {
         src: '/assets/images/category-tables.jpg',
-        title: 'Медицинські столи',
-        categories: [
-            'Операційні',
-            'Реабілітаційні',
-            'Столики'
-        ]
+        title: 'minimally-invasive-surgery-equipment',
     },
     {
         src: '/assets/images/category-beds.jpg',
-        title: 'Загальнолікарняне обладнання',
-        categories: [
-            'Ліжка',
-            'Стійки',
-            'Візки'
-        ]
+        title: 'led-lighting-systems',
     },
 ];
 

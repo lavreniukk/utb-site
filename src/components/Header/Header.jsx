@@ -17,6 +17,8 @@ import {
 import { Link, NavLink } from 'react-router-dom';
 import './headerstyles.css';
 import categories from '../../constants/productCategories';
+import Accordion from '../Accordion/Accordion';
+import categoriesNames from '../../constants/categoriesNames';
 
 const setActiveLink = ({isActive}) => isActive ? 'styled-navlink styled-navlink-active' : 'styled-navlink styled-navlink-inactive';
 
@@ -52,9 +54,27 @@ function Header() {
                 <DropdownMenu>
                     {
                         categories.map((category, index) => (
-                            <Link key={index} to={`/products/category/${category.mainCategory}`} className='header__category-link'>
+                            'secondaryCategory' in category ? 
+                               <Accordion
+                                header={
+                                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>
+                                            {categoriesNames.get(category.mainCategory)}
+                                        </Link>
+                                } 
+                                body={
+                                    category.secondaryCategory.map((secondary, index) => (
+                                    <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>
+                                        <DropdownItem>
+                                            {categoriesNames.get(secondary)}
+                                        </DropdownItem>
+                                    </Link>
+                                ))}
+                                key={index}
+                            />  
+                            :
+                            <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>
                                 <DropdownItem>
-                                    {category.mainCategory}
+                                    {categoriesNames.get(category.mainCategory)}
                                 </DropdownItem>
                             </Link>
                         ))
