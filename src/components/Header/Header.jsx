@@ -35,12 +35,12 @@ function Header() {
             <Row>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='/assets/images/utb/utb-logo-1.png' alt='УТБ Ресурс' loading='lazy'/>
+                <img src='/assets/images/utb/utb-logo-1.webp' alt='УТБ Ресурс' width='45%'/>
             </NavbarBrand>
             </Col>
             <Col>
             <NavbarBrand href='/' className='d-flex'>
-                <img src='/assets/images/utb/utb-logo-2.png' className='ms-auto' alt='Медичні технології заради життя' loading='lazy'/>
+                <img src='/assets/images/utb/utb-logo-2.webp' className='ms-auto' alt='Медичні технології заради життя' width='45%'/>
             </NavbarBrand>
             </Col>
             </Row>

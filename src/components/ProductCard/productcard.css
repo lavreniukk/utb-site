@@ -7,6 +7,7 @@
 }
 
 .product-card {
+    width: 100%;
     margin-bottom: 1.5rem;
     transition: box-shadow 350ms ease-in-out;
 }
@@ -23,7 +24,7 @@
 
 .product-card__title {
     color: var(--product-title);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .product-card__btn {
@@ -43,9 +44,21 @@
     background-color: var(--product-card-btn-click) !important;
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 768px) {
+    .product-card__title {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 576px) {
     .product-card {
         width: 80%;
         margin-bottom: 1rem;
+    }
+    .product-card__title {
+        font-size: 1.5rem;
     }
 }

@@ -8,6 +8,7 @@ import {
 } from 'reactstrap';
 import './carousel.css';
 import { fetchImagesUrls } from "../../utils/fetchingData";
+import Image from "../Image/Image";
 
 export default function CarouselComponent({carouselItems}) {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -45,7 +46,9 @@ export default function CarouselComponent({carouselItems}) {
             onExiting={() => setAnimate(true)}
             onExited={() => setAnimate(false)}
         >
-            <img src={imageUrls[index]} alt={slide.class} className={`carousel-img ${slide.class}`} loading='lazy'/>
+            <div className="d-flex justify-content-center align-items-center position-relative carousel__image-wrap">
+                <Image src={imageUrls[index]} title={slide.class} className={slide.class}/>
+            </div>
             <CarouselCaption 
                 captionText='text'
                 captionHeader='HEADER'

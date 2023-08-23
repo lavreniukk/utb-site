@@ -8,7 +8,6 @@ import scrollToTop from '../../utils/scrollToTop.js';
 import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
 import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
-import changeTitle from '../../utils/changeProductsPageTitle.js';
 import './productspage.css';
 
 function Products() {
@@ -18,7 +17,6 @@ function Products() {
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);
   const productsOnPage = 6;
   const { mainCategory, secondaryCategory, producerName } = useParams();
-  changeTitle(mainCategory, producerName);
 
   useEffect(() => {
     const fetchData = async () => {

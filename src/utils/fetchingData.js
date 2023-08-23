@@ -76,8 +76,10 @@ const fetchProductById = async (productId) => {
 
 const fetchImagesUrls = async (images) => {
   const promises = images.map((image) => {
-    const imageRef = ref(storage, image.src);
-    return getDownloadURL(imageRef);
+    if (typeof image === 'object') {
+      return getDownloadURL(ref(storage, image.src));
+    }
+    return getDownloadURL(ref(storage, image));
   });
 
   try {

@@ -15,9 +15,9 @@
 
 .product-image-slider {
     .swiper-slide {
-        padding-top: 100%;
+        width: 100%;
+        aspect-ratio: 1;
         overflow: hidden;
-        position: relative;
     }
     .product-image-slider__image {
         position: absolute;
@@ -57,9 +57,8 @@
     }
     .thumbs__img-wrapper {
         width: 100%;
-        padding-top: 100%;
+        aspect-ratio: 1;
         overflow: hidden;
-        position: relative;
         .thumbs__image {
             position: absolute;
             top: 0;

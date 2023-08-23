@@ -24,3 +24,9 @@
     color: var(--link-hovered);
     text-decoration: underline;
 }
+
+.category-card__image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}

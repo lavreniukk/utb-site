@@ -21,6 +21,11 @@
     border-radius: 50%;
 }
 
+.carousel__image-wrap {
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 768px) {
     .carousel-item-2 {
         object-position: 65% 90%;

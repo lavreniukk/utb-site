@@ -6,6 +6,7 @@ import './productimageslider.css';
 import { Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button } from 'reactstrap';
+import Image from '../Image/Image';
 
 function ProductImageSlider({ imagesSrcArray }) {
     const [activeThumb, setActiveThumb] = useState(null);
@@ -29,8 +30,8 @@ function ProductImageSlider({ imagesSrcArray }) {
         >
             {
                 imagesSrcArray.map((image, index) => (
-                    <SwiperSlide key={index} onClick={() => handleFullscreenOpen(index)}>
-                        <img src={image.src} className='product-image-slider__image' alt='product images' loading='lazy'/>
+                    <SwiperSlide key={index} onClick={() => handleFullscreenOpen(index)} className='d-flex justify-content-center align-items-center position-relative'>
+                        <Image src={image} className={'product-image-slider__image'}/>
                     </SwiperSlide>
                 ))
             }
@@ -46,8 +47,8 @@ function ProductImageSlider({ imagesSrcArray }) {
         {
             imagesSrcArray.map((image, index) => (
                 <SwiperSlide key={index}>
-                    <div className='thumbs__img-wrapper'>
-                        <img src={image.src} className='thumbs__image' alt='product images' loading='lazy'/>
+                    <div className='thumbs__img-wrapper d-flex justify-content-center align-items-center position-relative'>
+                        <Image src={image} className={'thumbs__image'}/>
                     </div>
                 </SwiperSlide>
             ))
@@ -67,7 +68,7 @@ function ProductImageSlider({ imagesSrcArray }) {
                     >
                     { imagesSrcArray.map((image, index) => (
                         <SwiperSlide key={index}>
-                            <img src={image.src} className='fullscreen-slider__image' alt='product images' loading='lazy'/>
+                            <Image src={image} className={'fullscreen-slider__image'}/>
                         </SwiperSlide>
                     ))}
                     </Swiper>
