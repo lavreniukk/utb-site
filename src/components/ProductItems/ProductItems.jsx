@@ -7,15 +7,15 @@ import { fetchImagesUrls } from '../../utils/fetchingData';
 
 function ProductItems({ products, loading }) {
     const [imagesUrls, setImagesUrls] = useState([]);    
-    const allImagesSrc = products.map(product => product.imageSrc[0]);
 
     useEffect(() => {
         const fetchImages = async () => {
-            const fetchedImages = await fetchImagesUrls(allImagesSrc);
+            const fetchedImages = await fetchImagesUrls(products.map(product => product.imageSrc[0]));
             setImagesUrls(fetchedImages);
         }
+
         fetchImages();
-    }, [allImagesSrc]);
+    }, [products]);
 
     if (loading) {
         return (
