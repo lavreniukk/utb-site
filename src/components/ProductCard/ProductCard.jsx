@@ -11,7 +11,7 @@ function ProductCard({product, image}) {
           <Image src={image} title={product.title}/>
         </div>
         <CardBody className='product-card__body'>
-            <CardTitle tag='h4' className='product-card__title'>{product.name}</CardTitle>
+            <CardTitle tag='h4' className='product-card__title'>{product.name} {product.article}</CardTitle>
             <Link to={`/product/${product.id}`} className='product-card__btn'>Детальніше</Link>
         </CardBody>
     </Card>

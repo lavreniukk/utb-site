@@ -8,6 +8,17 @@ const characteristicNames = new Map([
     ['towelHolder', 'Тримач рушників'],
     ['wheelSystem', 'Колісна система'],
     ['faceOpening', 'Лицьовий отвір'],
+    ['antiTrendelenburgPos', 'Положення анти-Тренделенбурга'],
+    ['backAngleAdjust', 'Регулювання кута нахилу спинки'],
+    ['curbWeight', 'Вага'],
+    ['dripHanger', 'Крапельна вішалка'],
+    ['footControl', 'Ножний пульт'],
+    ['footRest', 'Знімна підніжка'],
+    ['handles', 'Ручки'],
+    ['injectionSupport', "Підтримка ін'єкцій"],
+    ['trendelenburgPos', "Положення Тренделенбурга"],
+    ['lengthWith', "Довжина (без підніжки / з підніжкою)"],
+    ['stepHeight', "Висота кроку"],
 ]);
 
 export default characteristicNames;
