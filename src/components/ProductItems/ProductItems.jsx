@@ -9,12 +9,14 @@ function ProductItems({ products, loading }) {
     const [imagesUrls, setImagesUrls] = useState([]);    
 
     useEffect(() => {
-        const fetchImages = async () => {
-            const fetchedImages = await fetchImagesUrls(products.map(product => product.imageSrc[0]));
+        setImagesUrls([]);
+        const fetchImages = async (images) => {
+            const fetchedImages = await fetchImagesUrls(images);
             setImagesUrls(fetchedImages);
         }
 
-        fetchImages();
+        const images = products.map(product => product.imageSrc[0]);
+        fetchImages(images);
     }, [products]);
 
     if (loading) {

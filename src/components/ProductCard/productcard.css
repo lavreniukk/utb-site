@@ -9,6 +9,7 @@
 .product-card {
     width: 100%;
     margin-bottom: 1.5rem;
+    overflow: hidden;
     transition: box-shadow 350ms ease-in-out;
 }
 
@@ -42,6 +43,12 @@
 .product-card__btn:focus {
     color: white;
     background-color: var(--product-card-btn-click) !important;
+}
+
+.product-card__image-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
 }
 
 @media (max-width: 1200px) {

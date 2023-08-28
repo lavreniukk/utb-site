@@ -7,7 +7,7 @@ import Image from '../Image/Image';
 function ProductCard({product, image}) {
   return (
     <Card className='product-card'>
-        <div className='d-flex justify-content-center align-items-center position-relative category-card__image-wrap'>
+        <div className='d-flex justify-content-center align-items-center position-relative product-card__image-wrap'>
           <Image src={image} title={product.title}/>
         </div>
         <CardBody className='product-card__body'>
