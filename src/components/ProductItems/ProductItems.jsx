@@ -5,23 +5,25 @@ import ProductCard from '../ProductCard/ProductCard'
 import './productitems.css';
 import { fetchImagesUrls } from '../../utils/fetchingData';
 
-function ProductItems({ products, loading }) {
-    const [imagesUrls, setImagesUrls] = useState([]);    
+function ProductItems({ currentProducts, loading }) {
+    const [imagesUrls, setImagesUrls] = useState([]);
+    const [imagesLoading, setImagesLoading] = useState(true);  
 
     useEffect(() => {
-        setImagesUrls([]);
-        const fetchImages = async (images) => {
-            const fetchedImages = await fetchImagesUrls(images);
+        setImagesLoading(true);
+
+        const fetchImages = async () => {
+            const fetchedImages = await fetchImagesUrls(currentProducts.map(product => product.imageSrc[0]));
             setImagesUrls(fetchedImages);
+            setImagesLoading(false);
         }
 
-        const images = products.map(product => product.imageSrc[0]);
-        fetchImages(images);
-    }, [products]);
+        fetchImages();
+    }, [currentProducts]);
 
     if (loading) {
         return (
-            <Spinner></Spinner>
+            <Spinner/>
         )
     }
 
@@ -29,9 +31,9 @@ function ProductItems({ products, loading }) {
         <Container className='container__products'>
             <Row>
             { 
-                products.map((product, index) => (
+                currentProducts.map((product, index) => (
                     <Col className='d-flex justify-content-center' key={index} xs="12" sm="6" lg="4">
-                        <ProductCard product={product} image={imagesUrls[index]}/>
+                        <ProductCard product={product} image={imagesLoading ? null : imagesUrls[index]}/>
                     </Col>
                 ))
             }
@@ -40,4 +42,4 @@ function ProductItems({ products, loading }) {
     )
 }
 
-export default ProductItems
+export default ProductItems;

@@ -20,6 +20,7 @@
     background-color: var(--product-detail-blue);
 }
 
+
 .product-detail__product-name {
     font-weight: bold;
     color: var(--product-detail-darkblue)
@@ -27,6 +28,13 @@
 
 .product-detail__product-article {
     font-weight: bold;
+}
+
+.breadcrumb-item {
+    .product-detail__link {
+        color: var(--product-detail-darkblue);
+        transition: color 250ms ease-in-out;
+    }
 }
 
 .product-detail__link {

@@ -10,13 +10,14 @@ import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
 import './productspage.css';
 
-function Products() {
+function Products({title}) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);
   const productsOnPage = 6;
   const { mainCategory, secondaryCategory, producerName } = useParams();
+  document.title = 'УТБ Ресурс - ' + title; 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,7 +42,7 @@ function Products() {
 
   const indexOfLastProduct = currentPage * productsOnPage;
   const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
-  let currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
   const handlePaginationClick = (pageIndex) => {
     setCurrentPage(pageIndex);
@@ -64,7 +65,7 @@ function Products() {
           </Collapse>
         </Col>
         <Col xs="12" md="9">
-          <ProductItems products={currentProducts} loading={loading} />
+          <ProductItems currentProducts={currentProducts} loading={loading} />
           { products.length > productsOnPage && 
             <Pagination
               productsOnPage={productsOnPage}

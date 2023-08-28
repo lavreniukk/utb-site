@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Col, Container, Row } from 'reactstrap'
+import { Breadcrumb, BreadcrumbItem, Col, Container, Row } from 'reactstrap'
 import { fetchImagesUrls, fetchProductById } from '../../utils/fetchingData';
 import Spinner from '../../components/Spinner/Spinner';
 import ProductImageSlider from '../../components/ProductImageSlider/ProductImageSlider';
@@ -39,6 +39,13 @@ function ProductDetailPage() {
     return (
         <Container className='mt-5'>
             <Row className='mb-5'>
+                <Breadcrumb>
+                    <BreadcrumbItem><Link className='product-detail__link' to={'/products'}>Продукція</Link></BreadcrumbItem>
+                    <BreadcrumbItem><Link className='product-detail__link' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link></BreadcrumbItem>
+                    <BreadcrumbItem active>{product.name} {product.article}</BreadcrumbItem>
+                </Breadcrumb>
+            </Row>
+            <Row className='mb-3'>
                 <Col xs="12" sm="12" md="7">
                     <ProductImageSlider imagesSrcArray={imageUrls}/>
                 </Col>
