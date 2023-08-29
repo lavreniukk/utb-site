@@ -31,6 +31,21 @@ const characteristicNames = new Map([
     ['antibacterialPaintFrame', "Каркас покритий антибактеріальною фарбою"],
     ['mattressHandles', "Матрац з ручками для перенесення пацієнтів"],
     ['guideXRayCassette', "Направляюча рентгенівська касета"],
+    ['seatAndTotalWidth', "Ширина сидіння / загальна"],
+    ['depth', "Глибина"],
+    ['seatHeight', "Висота сидіння"],
+    ['headrestHeightAdjust', "Регулювання висоти підголівника"],
+    ['armrestsHeightAdjust', "Регулювання висоти підлокітників"],
+    ['bolster', "Болстер"],
+    ['totalUnfoldedLength', "Загальна довжина в розкладеному вигляді"],
+    ['footrestAngleAdjust', "Регулювання кута нахилу підніжки"],
+    ['footrest', "Підніжка"],
+    ['heightWithHeadrest', "Висота загальна / з підголовником"],
+    ['totalUnfoldedLengthWithFootrest', "Загальна довжина в розкладеному стані з підставкою для ніг"],
+    ['eurorails', "Єврорейки"],
+    ['flipTable', "Перекидний стіл"],
+    ['toolTable', "Інструментальний стіл"],
+    ['', ""],
 ]);
 
 export default characteristicNames;
