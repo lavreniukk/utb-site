@@ -10,6 +10,7 @@ const characteristicNames = new Map([
     ['faceOpening', 'Лицьовий отвір'],
     ['antiTrendelenburgPos', 'Положення анти-Тренделенбурга'],
     ['backAngleAdjust', 'Регулювання кута нахилу спинки'],
+    ['headrestAngleAdjust', 'Регулювання кута нахилу підголівника'],
     ['curbWeight', 'Вага'],
     ['dripHanger', 'Крапельна вішалка'],
     ['footControl', 'Ножний пульт'],
@@ -19,6 +20,17 @@ const characteristicNames = new Map([
     ['trendelenburgPos', "Положення Тренделенбурга"],
     ['lengthWith', "Довжина (без підніжки / з підніжкою)"],
     ['stepHeight', "Висота кроку"],
+    ['mattressAndTotalLength', "Довжина матраца / загальна"],
+    ['mattressAndTotalWidth', "Ширина матраца / загальна"],
+    ['wheelDiameter', "Діаметр колеса"],
+    ['sideRailings', "Бічні перила"],
+    ['wheelLock', "Центральний замок коліс"],
+    ['oxygenHanger', "Вішалка для кисневого балона"],
+    ['personalBasket', "Кошик для особистих речей пацієнта"],
+    ['patientRestraints', "Обмеження пацієнтів"],
+    ['antibacterialPaintFrame', "Каркас покритий антибактеріальною фарбою"],
+    ['mattressHandles', "Матрац з ручками для перенесення пацієнтів"],
+    ['guideXRayCassette', "Направляюча рентгенівська касета"],
 ]);
 
 export default characteristicNames;

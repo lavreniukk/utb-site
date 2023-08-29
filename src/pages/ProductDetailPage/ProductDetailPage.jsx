@@ -6,6 +6,7 @@ import Spinner from '../../components/Spinner/Spinner';
 import ProductImageSlider from '../../components/ProductImageSlider/ProductImageSlider';
 import characteristicNames from '../../constants/characteristicNames';
 import './productdetail.css';
+import scrollToTop from '../../utils/scrollToTop.js';
 import ColorPalette from '../../components/ColorPallete/ColorPalette';
 import producerImage from '../../constants/producerImage';
 import categoriesNames from '../../constants/categoriesNames';
@@ -27,6 +28,7 @@ function ProductDetailPage() {
             setImageUrls(fetchedImages);
         }
 
+        scrollToTop();
         fetchProduct();
     }, [productId]);
 

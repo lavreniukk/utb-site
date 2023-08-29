@@ -10,14 +10,16 @@ import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
 import './productspage.css';
 
+const productsOnPage = 6;
+
 function Products({title}) {
   const [products, setProducts] = useState([]);
+  const [currentProducts, setCurrentProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);
-  const productsOnPage = 6;
   const { mainCategory, secondaryCategory, producerName } = useParams();
-  document.title = 'УТБ Ресурс - ' + title; 
+  document.title = 'УТБ Ресурс - ' + title;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,13 +38,16 @@ function Products({title}) {
       setProducts(fetchedProducts);
       setLoading(false);
     };
+
     scrollToTop();
     fetchData();
   }, [mainCategory, secondaryCategory, producerName]);
 
-  const indexOfLastProduct = currentPage * productsOnPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
-  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+  useEffect(() => {
+    const indexOfLastProduct = currentPage * productsOnPage;
+    const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
+    setCurrentProducts(products.slice(indexOfFirstProduct, indexOfLastProduct));
+  }, [products, currentPage]);
 
   const handlePaginationClick = (pageIndex) => {
     setCurrentPage(pageIndex);
@@ -65,7 +70,7 @@ function Products({title}) {
           </Collapse>
         </Col>
         <Col xs="12" md="9">
-          <ProductItems currentProducts={currentProducts} loading={loading} />
+          <ProductItems currentProducts={currentProducts} loading={loading}/>
           { products.length > productsOnPage && 
             <Pagination
               productsOnPage={productsOnPage}
