@@ -45,6 +45,12 @@ const characteristicNames = new Map([
     ['eurorails', "Єврорейки"],
     ['flipTable', "Перекидний стіл"],
     ['toolTable', "Інструментальний стіл"],
+    ['heightOnFeet', "Висота на ніжках"],
+    ['heightOnWheels', "Висота на колесах"],
+    ['base', "Основа"],
+    ['seat', "Сидіння"],
+    ['', ""],
+    ['', ""],
     ['', ""],
 ]);
 

@@ -36,24 +36,27 @@ function ProductImageSlider({ imagesSrcArray }) {
                 ))
             }
         </Swiper>
-        <Swiper
-            onSwiper={setActiveThumb}
-            loop={true}
-            spaceBetween={10}
-            slidesPerView={imagesSrcArray.length >= 3 ? 3 : imagesSrcArray.length}
-            modules={[Navigation, Thumbs]}
-            className='product-image-slider__thumbs'
-        >
         {
-            imagesSrcArray.map((image, index) => (
-                <SwiperSlide key={index}>
-                    <div className='thumbs__img-wrapper d-flex justify-content-center align-items-center position-relative'>
-                        <Image src={image} className={'thumbs__image'}/>
-                    </div>
-                </SwiperSlide>
-            ))
+            imagesSrcArray.length > 1 &&
+            <Swiper
+                onSwiper={setActiveThumb}
+                loop={true}
+                spaceBetween={10}
+                slidesPerView={imagesSrcArray.length >= 3 ? 3 : imagesSrcArray.length}
+                modules={[Navigation, Thumbs]}
+                className='product-image-slider__thumbs'
+            >
+            {
+                imagesSrcArray.map((image, index) => (
+                    <SwiperSlide key={index}>
+                        <div className='thumbs__img-wrapper d-flex justify-content-center align-items-center position-relative'>
+                            <Image src={image} className={'thumbs__image'}/>
+                        </div>
+                    </SwiperSlide>
+                ))
+            }
+            </Swiper>
         }
-        </Swiper>
         {
             isFullscreenOpen && (
                 <div className='fullsreen-slider'>
