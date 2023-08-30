@@ -1,10 +1,10 @@
 import { getDownloadURL, ref } from 'firebase/storage';
 import { db, storage } from '../firebase/initializer';
-import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore/lite';
+import { collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore/lite';
 
 const fetchProducts = async () => {
     try {
-      let queryRef = query(collection(db, 'products'));
+      let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
       
       //if querries will be too slow. ill try to implement pagination through firebase
       
@@ -28,7 +28,7 @@ const fetchProducts = async () => {
 
 const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerName) => {
   try {
-    let queryRef = query(collection(db, 'products'));
+    let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
 
     if (mainCategory) {
       queryRef = query(queryRef, where('mainCategory', '==', mainCategory));
