@@ -69,8 +69,36 @@ const characteristicNames = new Map([
     ['additionalShelf', "Додаткова полиця"],
     ['cableSupport', "Підтримка кабелю"],
     ['powerExtension', "Подовжувач живлення"],
+    ['widthChoice', "Ширина на вибір"],
+    ['tableTopAngleAdjust', "Регулювання кута нахилу стільниці"],
+    ['manuallyArmrestAdjust', "Підлокітники, що регулюються вручну"],
+    ['dropOutSideShelves', "Випадаючі бічні полиці"],
+    ['steeringFrame', "Рульова рама"],
+    ['electricTableTopAngleAdjust', "Електричне регулювання кута стільниці"],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
     ['', ""],
     ['', ""],
 ]);
+
+// length
+// widthChoice
+// height
+// headrestAngleAdjust
+// backAngleAdjust
+// tableTopAngleAdjust
+// curbWeight
+// maxLoad
+// faceOpening  в стандарті
+// manuallyArmrestAdjust   опція
+// dropOutSideShelves  опція
+// towelHolder опція
+// steeringFrame   опція
+// footControl опція
+// wheelSystem опція
+// electricTableTopAngleAdjust опція
+// images/products/.webp
 
 export default characteristicNames;
