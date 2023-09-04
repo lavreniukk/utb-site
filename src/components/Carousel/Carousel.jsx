@@ -4,11 +4,11 @@ import {
     CarouselItem,
     CarouselControl,
     CarouselIndicators,
-    CarouselCaption,
 } from 'reactstrap';
 import './carousel.css';
 import { fetchImagesUrls } from "../../utils/fetchingData";
 import Image from "../Image/Image";
+import { Link } from "react-router-dom";
 
 export default function CarouselComponent({carouselItems}) {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -49,10 +49,11 @@ export default function CarouselComponent({carouselItems}) {
             <div className="d-flex justify-content-center align-items-center position-relative carousel__image-wrap">
                 <Image src={imageUrls[index]} title={slide.class} className={slide.class}/>
             </div>
-            <CarouselCaption 
-                captionText='text'
-                captionHeader='HEADER'
-            />
+            <div className="carousel-body">
+                <h1 className="carousel-body__header">{slide.header}</h1>
+                <div className="carousel-body__text"><span>{slide.text}</span></div>
+                {slide.buttonTxt && <Link to={slide.link} className="carousel-body__link">{slide.buttonTxt}</Link>}
+            </div>
         </CarouselItem>
     );
 
@@ -62,7 +63,7 @@ export default function CarouselComponent({carouselItems}) {
             next={next}
             previous={previous}
             pause={'hover'}
-            interval={4000}
+            interval={100000}
             >
             <CarouselIndicators
                 items={slides}

@@ -1,3 +1,7 @@
+:root {
+    --carousel-blue: #479fd6;
+}
+
 .carousel-item-1 {
     object-position: center 10%;
 }
@@ -12,6 +16,33 @@
 
 .carousel-item {
     height: 65vh;
+}
+
+.carousel-body {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 2;
+    padding: 25px 45px;
+    background-color: #ffffffc4;
+    border-radius: 20px;
+}
+
+.carousel-body__header {
+    color: var(--carousel-blue);
+}
+
+.carousel-body__text {
+    font-size: 24px;
+    margin-bottom: 0.75rem;
+}
+
+.carousel-body__link {
+    background-color: var(--carousel-blue);
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
