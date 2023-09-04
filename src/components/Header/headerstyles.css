@@ -64,12 +64,9 @@ button.dropdown-item:active {
     background-color: var(--nav-btn-clicked);
 }
 
-.dropdown-menu {
-    .accordion__container {
-        padding: 4px 16px;
-    }  
+.dropdown-menu .accordion__container {
+    padding: 4px 16px;
 }
-
 
 @media (max-width: 767px) {
     div.dropdown-menu {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import './productimageslider.css';
 import { Navigation, Thumbs } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button } from 'reactstrap';
 import Image from '../Image/Image';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import './productimageslider.css';
 
 function ProductImageSlider({ imagesSrcArray }) {
     const [activeThumb, setActiveThumb] = useState(null);
