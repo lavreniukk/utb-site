@@ -84,29 +84,22 @@ const characteristicNames = new Map([
     ['headrestHeightAdjust', "Регулювання висоти підголівника"],
     ['headrestSwinging', "Розгойдування підголівника"],
     ['centralAngleAdjust', "Регулювання центрального кута"],
-    ['', ""],
+    ['heightChoice', "Висота на вибір"],
+    ['sideAngleAdjust', "Регулювання кута бічного вирізу"],
 ]);
 
 // length
 // widthChoice
-// height
+// heightChoice
 // headrestAngleAdjust
-// chestAngleAdjust
-// lumbarAngleAdjust
 // footrestAngleAdjust
-// backAngleAdjust
-// tableTopAngleAdjust
 // curbWeight
 // maxLoad
 // faceOpening  в стандарті
-// manuallyArmrestAdjust   опція
-// dropOutSideShelves  опція
 // towelHolder опція
-// steeringFrame   опція
-// frameControl
-// footControl опція
-// wheelSystem опція
-// electricTableTopAngleAdjust опція
+// lowerBerth опція
+// wheelBrakes опція
+// armrest опція
 // images/products/.webp
 
 export default characteristicNames;
