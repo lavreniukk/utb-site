@@ -1,5 +1,7 @@
 :root {
+    --carousel-darkblue: #4682A4;
     --carousel-blue: #479fd6;
+    --carousel-transparent-white: #ffffffd9;
 }
 
 .carousel-item-1 {
@@ -20,19 +22,27 @@
 
 .carousel-body {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 15vw;
+    transform: translateY(-50%);
     z-index: 2;
-    padding: 25px 45px;
-    background-color: #ffffffc4;
-    border-radius: 20px;
 }
 
 .carousel-body__header {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--carousel-transparent-white);
     color: var(--carousel-blue);
 }
 
 .carousel-body__text {
+    min-width: fit-content;
+    width: 25vw;
+    word-wrap: normal;
+    background-color: var(--carousel-transparent-white);
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 24px;
     margin-bottom: 0.75rem;
 }
@@ -43,10 +53,16 @@
     text-decoration: none;
     padding: 5px 15px;
     border-radius: 5px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.carousel-body__link:hover {
+    color: white;
+    background-color: var(--carousel-darkblue);
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: #479fd6;
+    background-color: var(--carousel-blue);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -64,6 +80,10 @@
 }
 
 @media (max-width: 576px) {
+    .carousel-body {
+        left: 10vw;
+        padding: 15px 20px;
+    }
     .carousel-item-2 {
         object-position: 60% bottom;
     }

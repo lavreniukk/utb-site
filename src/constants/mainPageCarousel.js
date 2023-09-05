@@ -4,7 +4,7 @@ const carouselItems = [
         key: 1,
         class: 'carousel-item-1',
         header: 'УТБ Ресурс',
-        text: 'Широкий асортимент',
+        text: 'Широкий асортимент товару відомих виробників з усього світу',
         buttonTxt: 'Продукція',
         link: '/products'
     },

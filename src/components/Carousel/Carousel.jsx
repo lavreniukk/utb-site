@@ -51,7 +51,7 @@ export default function CarouselComponent({carouselItems}) {
             </div>
             <div className="carousel-body">
                 <h1 className="carousel-body__header">{slide.header}</h1>
-                <div className="carousel-body__text"><span>{slide.text}</span></div>
+                <p className="carousel-body__text">{slide.text}</p>
                 {slide.buttonTxt && <Link to={slide.link} className="carousel-body__link">{slide.buttonTxt}</Link>}
             </div>
         </CarouselItem>
