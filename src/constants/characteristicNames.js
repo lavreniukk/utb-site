@@ -75,11 +75,15 @@ const characteristicNames = new Map([
     ['dropOutSideShelves', "Випадаючі бічні полиці"],
     ['steeringFrame', "Рульова рама"],
     ['electricTableTopAngleAdjust', "Електричне регулювання кута стільниці"],
-    ['', ""],
-    ['', ""],
-    ['', ""],
-    ['', ""],
-    ['', ""],
+    ['frameControl', "Керування рамою"],
+    ['chestAngleAdjust', "Регулювання кута грудного відділу"],
+    ['lumbarAngleAdjust', "Регулювання кута нахилу поперекового відділу"],
+    ['sideSwing', "Боковий розмах"],
+    ['handTraction', "Ручна тяга"],
+    ['armrest', "Підлокітники"],
+    ['headrestHeightAdjust', "Регулювання висоти підголівника"],
+    ['headrestSwinging', "Розгойдування підголівника"],
+    ['centralAngleAdjust', "Регулювання центрального кута"],
     ['', ""],
 ]);
 
@@ -87,6 +91,9 @@ const characteristicNames = new Map([
 // widthChoice
 // height
 // headrestAngleAdjust
+// chestAngleAdjust
+// lumbarAngleAdjust
+// footrestAngleAdjust
 // backAngleAdjust
 // tableTopAngleAdjust
 // curbWeight
@@ -96,6 +103,7 @@ const characteristicNames = new Map([
 // dropOutSideShelves  опція
 // towelHolder опція
 // steeringFrame   опція
+// frameControl
 // footControl опція
 // wheelSystem опція
 // electricTableTopAngleAdjust опція
