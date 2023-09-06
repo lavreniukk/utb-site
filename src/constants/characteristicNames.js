@@ -86,20 +86,53 @@ const characteristicNames = new Map([
     ['centralAngleAdjust', "Регулювання центрального кута"],
     ['heightChoice', "Висота на вибір"],
     ['sideAngleAdjust', "Регулювання кута бічного вирізу"],
+    ['tableTopType', "Тип стільниці"],
+    ['electricTableTopAngleAdjust', "Електричне регулювання кута нахилу стільниці"],
+    ['electricVoltage', "Електрична напруга"],
+    ['maxPower', "Максимальна потужність"],
+    ['protectClass', "Клас захисту"],
+    ['protectDegree', "Ступінь захисту"],
+    ['longitudinalElevator', "Поздовжній підйомник"],
+    ['transverseElevator', "Поперечний підйомник"],
+    ['wheels', "Колеса"],
+    ['footHandControl', "Пульт ручний + ножний"],
+    ['waterproofMattress', "Водонепроникний матрац"],
+    ['footControl2', "Ножний пульт (2 шт.)"],
+    ['manualTableTopAngleAdjust', "Ручне регулювання кута нахилу стільниці"],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
+    ['', ""],
 ]);
 
 // length
-// widthChoice
-// heightChoice
-// headrestAngleAdjust
-// footrestAngleAdjust
+// height
+// width
+// tableTopType
+// manualTableTopAngleAdjust недоступне
+// electricTableTopAngleAdjust недоступне
+// tableTopAngleAdjust від 0° до 30°
 // curbWeight
 // maxLoad
-// faceOpening  в стандарті
-// towelHolder опція
-// lowerBerth опція
-// wheelBrakes опція
-// armrest опція
-// images/products/.webp
+// electricVoltage
+// maxPower
+// protectClass
+// protectDegree
+// dripHanger опція
+// eurorails опція
+// toolTable опція
+// footControl опція
+// footControl2 опція
+// longitudinalElevator опція
+// transverseElevator опція
+// wheels опція
+// waterproofMattress опція
+// footHandControl опція
+// images/products/VET-S06-1.webp
 
 export default characteristicNames;

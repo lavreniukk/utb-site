@@ -44,7 +44,7 @@ const categories = [
     },
     {
         mainCategory: 'veterinary-tables',
-        secondaryCategory: [ 'electrical', 'mechanical', 'fixed-height' ]
+        secondaryCategory: [ 'electrical', 'hydraulic', 'fixed-height' ]
     },
 ];
 
