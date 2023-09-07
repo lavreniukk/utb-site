@@ -99,8 +99,8 @@ const characteristicNames = new Map([
     ['waterproofMattress', "Водонепроникний матрац"],
     ['footControl2', "Ножний пульт (2 шт.)"],
     ['manualTableTopAngleAdjust', "Ручне регулювання кута нахилу стільниці"],
-    ['', ""],
-    ['', ""],
+    ['shelfWithDrawerAndBowl', "Полиця з висувним ящиком і чашею з нержавіючої сталі"],
+    ['gelHolder', "Тримач гелю"],
     ['', ""],
     ['', ""],
     ['', ""],
@@ -109,6 +109,26 @@ const characteristicNames = new Map([
     ['', ""],
     ['', ""],
 ]);
+
+// length
+// widthChoice
+// height
+// headrestAngleAdjust
+// chestAngleAdjust
+// lumbarAngleAdjust
+// footrestAngleAdjust
+// trendelenburgPos
+// antiTrendelenburgPos
+// centralAngleAdjust
+// curbWeight
+// maxLoad
+// faceOpening в стандарті
+// manuallyArmrestAdjust опція
+// towelHolder опція
+// steeringFrame
+// footControl
+// wheelSystem опція
+
 
 // length
 // height
