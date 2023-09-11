@@ -130,6 +130,9 @@ const characteristicNames = new Map([
     ['', ""],
 ]);
 
+// mainCategory led-lighting-systems
+// secondaryCategory operating
+
 // images/products/LED-2-1.webp
 // images/products/LED-2-2.webp
 // images/products/LED-2-3.webp

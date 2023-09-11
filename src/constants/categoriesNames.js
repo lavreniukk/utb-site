@@ -13,6 +13,7 @@ const categoriesNames = new Map([
     ['led-lighting-systems', 'Освітлювальні системи світлодіодного типу'],
     ['operating', 'Операційні'],
     ['inspection', 'Оглядові'],
+    ['combination', 'Комбінація світильників'],
     ['hd-video-system', 'Відеосистема HD'],
     ['electrosurgery', 'Електрохірургія'],
     ['minimally-invasive-surgery-equipment', 'Обладнання для малоінвазивної хірургії'],
