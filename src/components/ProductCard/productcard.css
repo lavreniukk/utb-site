@@ -1,5 +1,6 @@
 :root {
     --product-card-title: #444444;
+    --product-card-article: #646464;
     --product-card-shadow: #a0a0a0;
     --product-card-border: #d2d2d2;
     --product-card-btn: #479fd6;
@@ -25,7 +26,13 @@
 
 .product-card__title {
     color: var(--product-title);
+    margin-bottom: 0.2rem !important;
     font-size: 1.5rem;
+}
+
+.product-card__article {
+    color: var(--product-card-article);
+    margin-bottom: 1rem !important;
 }
 
 .product-card__btn {
