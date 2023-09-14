@@ -1,6 +1,6 @@
 const popularCategoriesItems = [
     {
-        src: 'images/mainpage/category-chairs.jpg',
+        src: 'images/products/FG-R01-1.webp',
         title: 'gynecological-chairs',
     },
     {
@@ -8,7 +8,7 @@ const popularCategoriesItems = [
         title: 'minimally-invasive-surgery-equipment',
     },
     {
-        src: 'images/mainpage/category-beds.jpg',
+        src: 'images/products/LED-5-1.webp',
         title: 'led-lighting-systems',
     },
 ];

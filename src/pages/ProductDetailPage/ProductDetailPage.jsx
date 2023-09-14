@@ -78,17 +78,22 @@ function ProductDetailPage() {
                     </Row>
                 </Col>
             </Row>
-            <h2 className='text-center mb-3'>Характеристики</h2>
-            <div className='d-flex flex-column mb-5'>
-                {
-                Object.keys(product.characteristics).map((key, index) => (
-                    <div className='characteristic__wrapper d-flex mb-2' key={index}>
-                        <span className='characteristic__name me-3'>{characteristicNames.get(key)}</span>
-                        <span className='characteristic__value'>{product.characteristics[key]}</span>
-                    </div>
-                ))
+            {
+                product.characteristics &&
+                <>
+                <h2 className='text-center mb-3'>Характеристики</h2>
+                <div className='d-flex flex-column mb-5'>
+                    {
+                        Object.keys(product.characteristics).map((key, index) => (
+                        <div className='characteristic__wrapper d-flex mb-2' key={index}>
+                            <span className='characteristic__name me-3'>{characteristicNames.get(key)}</span>
+                            <span className='characteristic__value'>{product.characteristics[key]}</span>
+                        </div>
+                    ))
+                    }
+                </div>
+                </>
             }
-            </div>
             {
                 product.hasColorPalette && 
                 <>

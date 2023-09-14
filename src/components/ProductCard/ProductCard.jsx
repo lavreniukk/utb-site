@@ -10,9 +10,12 @@ function ProductCard({product, image}) {
         <div className='d-flex justify-content-center align-items-center position-relative product-card__image-wrap'>
           <Image src={image} title={product.title}/>
         </div>
-        <CardBody className='product-card__body'>
+        <CardBody className='d-flex flex-column'>
             <CardTitle tag='h4' className='product-card__title'>{product.name}</CardTitle>
-            <CardTitle tag='h5' className='product-card__article'>{product.article}</CardTitle>
+            <div className='d-flex justify-content-between mb-auto'>
+              <CardTitle tag='h5' className='product-card__article'>{product.article}</CardTitle>
+              <CardTitle tag='h5' className='product-card__article'>{product.producerName}</CardTitle>
+            </div>
             <Link to={`/product/${product.id}`} className='product-card__btn'>Детальніше</Link>
         </CardBody>
     </Card>

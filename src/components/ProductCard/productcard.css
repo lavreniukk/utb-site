@@ -36,6 +36,7 @@
 }
 
 .product-card__btn {
+    width: fit-content;
     color: white;
     text-decoration: none;
     padding: 5px 10px;

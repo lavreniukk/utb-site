@@ -151,5 +151,4 @@ const characteristicNames = new Map([
 // support - в стандарті
 // handrails - в стандарті
 
-
 export default characteristicNames;
