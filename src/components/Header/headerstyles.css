@@ -49,7 +49,7 @@ div.dropdown-menu {
 }
 
 button.dropdown-item {
-    color: var(--nav-link-color);
+    color: var(--product-filter-link-color);
     white-space: normal;
     overflow-wrap: normal;
 }

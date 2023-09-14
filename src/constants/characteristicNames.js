@@ -106,6 +106,7 @@ const characteristicNames = new Map([
     ['backSegmentAngle', "Кут підйому заднього сегмента"],
     ['backSegmentAutoregression', "Авторегресія заднього сегмента"],
     ['weightWithoutWithAdds', "Вага без додаткових опцій / з додатковими опціями"],
+    ['', ""],
     ['brightnessLux', "Яскравість (люкс)"],
     ['criRa', "Індекс передавання кольору (Ra)"],
     ['colorTemperature', "Колірна температура (K)"],
@@ -116,9 +117,9 @@ const characteristicNames = new Map([
     ['ledLifespanHours', "Термін служби світлодіодів (год)"],
     ['workingArea', "Робоча площа (см)"],
     ['lampBody', "Корпус лампи Ø (см)"],
-    ['', ""],
-    ['', ""],
-    ['', ""],
+    ['mobileBase', "Мобільне кріплення"],
+    ['wallBase', "Настінне кріплення"],
+    ['ceilingBase', "Стельове кріплення"],
     ['', ""],
     ['', ""],
     ['', ""],
@@ -130,67 +131,93 @@ const characteristicNames = new Map([
     ['', ""],
 ]);
 
+//Операційний освітлювальний прилад
+//Оглядовий освітлювальний прилад
+
 // mainCategory led-lighting-systems
-// secondaryCategory operating
+// secondaryCategory operating inspection
 
-// images/products/LED-2-1.webp
-// images/products/LED-2-2.webp
-// images/products/LED-2-3.webp
-// images/products/LED-2-4.webp
-// images/products/LED-2-5.webp
-// images/products/LED-2-6.webp
+/* 
+Компанія Dr. Mach з дня свого заснування у 1947 р. фокусується виключно на виробництві медичних світильників та нагромадила фундаментальний досвід у даному напрямку. У даний час компанія пропонує найсучасніші системи освітлення для медицини, що характеризуються великим терміном служби, колірною температурою, що змінюється, і практично повною відсутністю теплового випромінювання.
+*/
 
-// images/products/LED-3-1.webp
-// images/products/LED-3-2.webp
-// images/products/LED-3-3.webp
-// images/products/LED-3-4.webp
-// images/products/LED-3-5.webp
+/* 
+images/products/LED-2-1.webp
+images/products/LED-2-2.webp
+images/products/LED-2-3.webp
+images/products/LED-2-4.webp
+images/products/LED-2-5.webp
+images/products/LED-2-6.webp
+images/products/LED-3-3.webp
+*/
 
-// images/products/LED-5-1.webp
-// images/products/LED-5-2.webp
-// images/products/LED-5-3.webp
-// images/products/LED-5-4.webp
+/* 
+images/products/LED-3-1.webp
+images/products/LED-3-2.webp
+images/products/LED-3-3.webp
+images/products/LED-3-4.webp
+images/products/LED-3-5.webp
+*/
 
-// images/products/LED-6-1.webp
+/*
+images/products/LED-5-1.webp
+images/products/LED-5-2.webp
+images/products/LED-5-3.webp
+images/products/LED-5-4.webp
+*/
 
-// images/products/LED-8-1.webp
-// images/products/LED-8-2.webp
-// images/products/LED-8-3.webp
-// images/products/LED-8-4.webp
+/*
+images/products/LED-6-1.webp
+*/
 
-// images/products/LED-115-1.webp
-// images/products/LED-115-2.webp
-// images/products/LED-115-3.webp
+/*
+images/products/LED-8-1.webp
+images/products/LED-8-2.webp
+images/products/LED-8-3.webp
+images/products/LED-8-4.webp
+*/
 
-// images/products/LED-120-1.webp
-// images/products/LED-120-2.webp
-// images/products/LED-120-3.webp
-// images/products/LED-120-4.webp
-// images/products/LED-120-5.webp
-// images/products/LED-120-6.webp
-// images/products/LED-120-7.webp
-// images/products/LED-120-8.webp
-// images/products/LED-120-9.webp
+/*
+images/products/LED-115-1.webp
+images/products/LED-115-2.webp
+images/products/LED-115-3.webp
+*/
 
-// images/products/LED-130-1.webp
-// images/products/LED-130-2.webp
-// images/products/LED-130-3.webp
-// images/products/LED-130-4.webp
-// images/products/LED-130-5.webp
-// images/products/LED-130-6.webp
-// images/products/LED-130-7.webp
-// images/products/LED-130-8.webp
-// images/products/LED-130-9.webp
+/*
+images/products/LED-120-1.webp
+images/products/LED-120-2.webp
+images/products/LED-120-3.webp
+images/products/LED-120-4.webp
+images/products/LED-120-5.webp
+images/products/LED-120-6.webp
+images/products/LED-120-7.webp
+images/products/LED-120-8.webp
+images/products/LED-120-9.webp
+*/
 
+/*
+images/products/LED-130-1.webp
+images/products/LED-130-2.webp
+images/products/LED-130-3.webp
+images/products/LED-130-4.webp
+images/products/LED-130-5.webp
+images/products/LED-130-6.webp
+images/products/LED-130-7.webp
+images/products/LED-130-8.webp
+images/products/LED-130-9.webp
+*/
 
-// images/products/LED-150-1.webp
-// images/products/LED-150-2.webp
-// images/products/LED-150-3.webp
-// images/products/LED-150-4.webp
+/*
+images/products/LED-150-1.webp
+images/products/LED-150-2.webp
+images/products/LED-150-3.webp
+images/products/LED-150-4.webp
+*/
 
-// images/products/LED-300-1.webp
-// images/products/LED-300-2.webp
-// images/products/LED-300-3.webp
-
+/*
+images/products/LED-300-1.webp
+images/products/LED-300-2.webp
+images/products/LED-300-3.webp
+*/
 
 export default characteristicNames;

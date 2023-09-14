@@ -21,7 +21,7 @@ const categories = [
     },
     {
         mainCategory: 'led-lighting-systems',
-        secondaryCategory: ['operating', 'inspection', 'combination', 'hd-video-system']
+        secondaryCategory: ['operating', 'inspection', 'hd-video-system']
     },
     {
         mainCategory: 'electrosurgery'
