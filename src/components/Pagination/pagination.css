@@ -1,0 +1,10 @@
+.pagination__container {
+    padding-left: 12px;
+}
+
+@media (max-width: 576px) {
+    .pagination__container {
+        padding-left: 9px;
+        margin-left: 10%;
+    }
+}

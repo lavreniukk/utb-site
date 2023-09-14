@@ -23,8 +23,20 @@
     top: 20px;
 }
 
+.products-page__searchbar {
+    padding: 0 12px;
+}
+
 @media (max-width: 768px) {
     .column__product-filter {
         position: static;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-page__searchbar {
+        margin: 0 auto;
+        padding: 0;
+        width: 75% !important;
     }
 }

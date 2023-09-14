@@ -1,0 +1,23 @@
+:root {
+    --searchbar-blue: #479fd6;
+    --searchbar-border: #d2d2d2;
+    --searchbar-darkblue: #4682A4;
+    --searchbar-white: #ffffff;
+    --searchbar-gray: #e9ecef;
+}
+
+.searchbar__container input {
+    border-color: var(--searchbar-border);
+}
+
+.searchbar__btn {
+    color: var(--searchbar-blue) !important;
+    background-color: var(--searchbar-white) !important;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}
+
+.searchbar__btn:hover {
+    color: var(--searchbar-darkblue) !important;
+    background-color: var(--searchbar-gray) !important;
+    transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+}

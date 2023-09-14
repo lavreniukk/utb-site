@@ -9,6 +9,7 @@ import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
 import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
 import './productspage.css';
+import Searchbar from '../../components/Searchbar/Searchbar.jsx';
 
 const productsOnPage = 6;
 
@@ -66,11 +67,23 @@ function Products({title}) {
         </Col>
         <Col xs="12" md="3" className='column__product-filter mb-3'>
           <Collapse className='d-md-flex' isOpen={isOpenSideBar}>
-            <ProductFilter categories={categories} producers={producers}/>
+            <ProductFilter 
+              categories={categories} 
+              producers={producers}
+            />
           </Collapse>
         </Col>
         <Col xs="12" md="9">
-          <ProductItems currentProducts={currentProducts} loading={loading}/>
+          <Searchbar 
+            className='products-page__searchbar mb-4'
+            setProducts={setProducts}
+            setLoading={setLoading}
+            setCurrentPage={setCurrentPage}
+          />
+          <ProductItems 
+            currentProducts={currentProducts} 
+            loading={loading}
+          />
           { products.length > productsOnPage && 
             <Pagination
               productsOnPage={productsOnPage}

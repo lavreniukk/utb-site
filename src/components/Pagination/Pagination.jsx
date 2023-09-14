@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './pagination.css';
 
 function Pagination({ productsOnPage, totalProductsCount, currentPage, handlePaginationClick }) {
     const pageNumbers = [];
@@ -8,7 +9,7 @@ function Pagination({ productsOnPage, totalProductsCount, currentPage, handlePag
     }
 
     return (
-        <nav>
+        <nav className='pagination__container'>
             <ul className='pagination'>
                 {
                     pageNumbers.map((number, index) => {

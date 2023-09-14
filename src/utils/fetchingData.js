@@ -57,6 +57,41 @@ const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerNa
   }
 }
 
+const fetchSearchedProducts = async (searchParameter) => {
+  try {
+    let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
+
+    const productsSnapshot = await getDocs(queryRef);
+    const productsData = productsSnapshot.docs.map(doc => {
+      return {
+        id: doc.id,
+        ...doc.data()
+      }
+    });
+
+    console.log(searchParameter);
+
+    if (searchParameter === '') {
+      return productsData;
+    }
+
+    const formatedSearchParam = searchParameter.toLowerCase().replace(/\s/g, '');
+    console.log(productsData);
+    console.log(productsData.filter(product => 
+      product.name.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam) || 
+      product.article.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam)
+    ));
+
+    return productsData.filter(product => 
+      product.name.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam) || 
+      product.article.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam)
+    );
+  } catch (error) {
+    console.error('Error fetching products: ', error);
+    return [];
+  }
+}
+
 const fetchProductById = async (productId) => {
   try {
     let queryRef = query(doc(db, 'products', productId));
@@ -91,4 +126,4 @@ const fetchImagesUrls = async (images) => {
   }
 };
 
-export { fetchProducts, fetchFilteredProducts, fetchProductById, fetchImagesUrls };
+export { fetchProducts, fetchFilteredProducts, fetchSearchedProducts, fetchProductById, fetchImagesUrls };

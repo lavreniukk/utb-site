@@ -120,104 +120,36 @@ const characteristicNames = new Map([
     ['mobileBase', "Мобільне кріплення"],
     ['wallBase', "Настінне кріплення"],
     ['ceilingBase', "Стельове кріплення"],
-    ['', ""],
-    ['', ""],
-    ['', ""],
-    ['', ""],
-    ['', ""],
+    ['sectionCount', "Кількість секцій"],
+    ['mattressBedLength', "Довжина матрацного ложа"],
+    ['mattressBedWidth', "Ширина матрацного ложа"],
+    ['spineSectionAngleAdjust', "Регулювання кута нахилу спинної секції"],
+    ['hipSectionAngleAdjust', "Регулювання кута нахилу тазостегнової секції"],
+    ['mattressSectionAngleAdjust', "Регулювання матрацної основи по відношенню до горизонталі"],
+    ['controlPanelWithLockingKey', "Пульт управління з блокуючим ключем"],
+    ['support', "Гусак-підтримка"],
+    ['handrails', "Поручні"],
     ['', ""],
     ['', ""],
     ['', ""],
     ['', ""],
 ]);
 
-//Операційний освітлювальний прилад
-//Оглядовий освітлювальний прилад
+// length
+// width
+// height
+// mattressBedLength
+// mattressBedWidth
+// spineSectionAngleAdjust
+// hipSectionAngleAdjust
+// mattressSectionAngleAdjust
+// curbWeight - 116 кг
+// maxLoad
+// sectionCount
+// wheelBrakes - в стандарті
+// controlPanelWithLockingKey - в стандарті
+// support - в стандарті
+// handrails - в стандарті
 
-// mainCategory led-lighting-systems
-// secondaryCategory operating inspection
-
-/* 
-Компанія Dr. Mach з дня свого заснування у 1947 р. фокусується виключно на виробництві медичних світильників та нагромадила фундаментальний досвід у даному напрямку. У даний час компанія пропонує найсучасніші системи освітлення для медицини, що характеризуються великим терміном служби, колірною температурою, що змінюється, і практично повною відсутністю теплового випромінювання.
-*/
-
-/* 
-images/products/LED-2-1.webp
-images/products/LED-2-2.webp
-images/products/LED-2-3.webp
-images/products/LED-2-4.webp
-images/products/LED-2-5.webp
-images/products/LED-2-6.webp
-images/products/LED-3-3.webp
-*/
-
-/* 
-images/products/LED-3-1.webp
-images/products/LED-3-2.webp
-images/products/LED-3-3.webp
-images/products/LED-3-4.webp
-images/products/LED-3-5.webp
-*/
-
-/*
-images/products/LED-5-1.webp
-images/products/LED-5-2.webp
-images/products/LED-5-3.webp
-images/products/LED-5-4.webp
-*/
-
-/*
-images/products/LED-6-1.webp
-*/
-
-/*
-images/products/LED-8-1.webp
-images/products/LED-8-2.webp
-images/products/LED-8-3.webp
-images/products/LED-8-4.webp
-*/
-
-/*
-images/products/LED-115-1.webp
-images/products/LED-115-2.webp
-images/products/LED-115-3.webp
-*/
-
-/*
-images/products/LED-120-1.webp
-images/products/LED-120-2.webp
-images/products/LED-120-3.webp
-images/products/LED-120-4.webp
-images/products/LED-120-5.webp
-images/products/LED-120-6.webp
-images/products/LED-120-7.webp
-images/products/LED-120-8.webp
-images/products/LED-120-9.webp
-*/
-
-/*
-images/products/LED-130-1.webp
-images/products/LED-130-2.webp
-images/products/LED-130-3.webp
-images/products/LED-130-4.webp
-images/products/LED-130-5.webp
-images/products/LED-130-6.webp
-images/products/LED-130-7.webp
-images/products/LED-130-8.webp
-images/products/LED-130-9.webp
-*/
-
-/*
-images/products/LED-150-1.webp
-images/products/LED-150-2.webp
-images/products/LED-150-3.webp
-images/products/LED-150-4.webp
-*/
-
-/*
-images/products/LED-300-1.webp
-images/products/LED-300-2.webp
-images/products/LED-300-3.webp
-*/
 
 export default characteristicNames;
