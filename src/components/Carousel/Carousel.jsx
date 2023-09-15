@@ -63,7 +63,7 @@ export default function CarouselComponent({carouselItems}) {
             next={next}
             previous={previous}
             pause={'hover'}
-            interval={100000}
+            interval={3000}
             >
             <CarouselIndicators
                 items={slides}
