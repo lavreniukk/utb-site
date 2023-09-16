@@ -80,7 +80,6 @@ function ProductDetailPage() {
                                     <h4 className='blue-left'>Підкатегорія</h4>
                                     <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{categoriesNames.get(product.secondaryCategory)}</Link>
                                 </>                                
-                                
                             }
                     </Row>
                 </Col>
