@@ -5,6 +5,26 @@
     --product-detail-link-hover: #444444;
 }
 
+.product-detail__skeleton-loading {
+    border-radius: 5px;
+    background-color: #bebebe;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0) 40%,
+        rgba(255, 255, 255, .5) 50%,
+        rgba(255, 255, 255, 0) 60%
+    ) #bebebe;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1.5s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+    to {
+      background-position-x: -30%;
+    }
+}
+
 .blue-left {
     position: relative;
 }

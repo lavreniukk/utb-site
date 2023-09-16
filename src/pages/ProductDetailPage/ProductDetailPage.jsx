@@ -32,20 +32,20 @@ function ProductDetailPage() {
         fetchProduct();
     }, [productId]);
 
-    if (loading) {
-        return (
-            <Spinner></Spinner>
-        )
-    }
-
     return (
         <Container className='mt-5'>
             <Row className='mb-5'>
-                <Breadcrumb>
-                    <BreadcrumbItem><Link className='product-detail__link' to={'/products'}>Продукція</Link></BreadcrumbItem>
-                    <BreadcrumbItem><Link className='product-detail__link' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link></BreadcrumbItem>
-                    <BreadcrumbItem active>{product.name} {product.article}</BreadcrumbItem>
-                </Breadcrumb>
+                {
+                    loading ?
+                    <div className='product-detail__skeleton-loading' style={{ width: '35vw', height: '30px' }}>
+                    </div>
+                    : 
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link className='product-detail__link' to={'/products'}>Продукція</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link className='product-detail__link' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>{product.name} {product.article}</BreadcrumbItem>
+                    </Breadcrumb>
+                }
             </Row>
             <Row className='mb-3'>
                 <Col xs="12" sm="12" md="7">
@@ -53,28 +53,35 @@ function ProductDetailPage() {
                 </Col>
                 <Col xs="12" sm="12" md="5" className='ps-5 pe-5'>
                     <Row className='mb-3'>
-                        <h2 className='product-detail__product-name'>{product.name}</h2>
-                        <span className='product-detail__product-article'>{product.article}</span>  
+                        { loading ? <div className='product-detail__skeleton-loading' style={{ width: '80%', height: '35px', marginBottom: '8px'}}></div> : <h2 className='product-detail__product-name'>{product.name}</h2> }
+                        { loading ? <div className='product-detail__skeleton-loading' style={{ width: '30%', height: '30px' }}></div> : <span className='product-detail__product-article'>{product.article}</span> }
                     </Row>
                     <Row>
-                       <h4 className='blue-left'>Опис</h4>
-                        <p>
-                            {product.description}
-                        </p> 
+                        <h4 className='blue-left'>Опис</h4>
+                            { loading ? <div className='product-detail__skeleton-loading' style={{ width: '100%', height: '250px', marginBottom: '16px'}}></div> : <p>{product.description}</p> }
                         <h4 className='blue-left'>Виробник</h4>
-                        <Link className='product-detail__link d-flex flex-column mb-3' to={`/products/producer/${product.producerName}`}>
-                            {product.producerName}
-                            <img src={producerImage[product.producerName]} alt={product.producerName} width='50%' loading='lazy'/>
-                        </Link>
+                            { loading ? 
+                                <div className='product-detail__skeleton-loading' style={{ width: '80%', height: '80px', marginBottom: '16px'}}></div>
+                                :
+                                <Link className='product-detail__link d-flex flex-column mb-3' to={`/products/producer/${product.producerName}`}>
+                                    {product.producerName}
+                                    <img src={producerImage[product.producerName]} alt={product.producerName} width='50%' loading='lazy'/>
+                                </Link>
+                            }
                         <h4 className='blue-left'>Категорія</h4>
-                        <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link>
-                        {
-                            product.secondaryCategory && 
-                            <>
-                                <h4 className='blue-left'>Підкатегорія</h4>
-                                <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{categoriesNames.get(product.secondaryCategory)}</Link>
-                            </>
-                        }
+                            { loading ? 
+                                <div className='product-detail__skeleton-loading' style={{ width: '80%', height: '80px', marginBottom: '16px'}}></div>
+                                :
+                                <Link className='product-detail__link mb-3' to={`/products/category/${product.mainCategory}`}>{categoriesNames.get(product.mainCategory)}</Link>
+                            }
+                            {
+                                product.secondaryCategory && 
+                                <>
+                                    <h4 className='blue-left'>Підкатегорія</h4>
+                                    <Link className='product-detail__link' to={`/products/category/${product.mainCategory}/${product.secondaryCategory}`}>{categoriesNames.get(product.secondaryCategory)}</Link>
+                                </>                                
+                                
+                            }
                     </Row>
                 </Col>
             </Row>
