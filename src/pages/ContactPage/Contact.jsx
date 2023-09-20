@@ -17,7 +17,7 @@ export default function Contact({title}) {
                 <h1 className="text-center text-uppercase mt-5 mb-5">Контакти</h1>
                 <Row xs="1" md="3">
                     <Col className="d-flex justify-content-center">
-                        <Card className='mb-3 styled-contact-card'>
+                        <Card className='mb-3 styled-contact-card w-100'>
                             <CardBody>
                                 <div className="contact-icon d-flex justify-content-center mb-2">
                                     <i className="fa-solid fa-home"></i>
@@ -32,7 +32,7 @@ export default function Contact({title}) {
                         </Card>
                     </Col>
                     <Col className="d-flex justify-content-center">
-                        <Card className='mb-3 styled-contact-card'>
+                        <Card className='mb-3 styled-contact-card w-100'>
                             <CardBody>
                                 <div className="contact-icon d-flex justify-content-center mb-2">
                                     <i className="fa-solid fa-envelope"></i>
@@ -41,13 +41,13 @@ export default function Contact({title}) {
                                     Електронна пошта
                                 </CardTitle>
                                 <CardSubtitle tag='h5' className="mb-3">
-                                    <a href="mailto: info@utbresurs.com.ua" className="contact-link">info@utbresurs.com.ua</a>
+                                    <a href="mailto: info@utbresurs.com.ua" className="contact-link text-decoration-none position-relative">info@utbresurs.com.ua</a>
                                 </CardSubtitle>
                             </CardBody>
                         </Card>
                     </Col>
                     <Col className="d-flex justify-content-center">
-                        <Card className='mb-3 styled-contact-card'>
+                        <Card className='mb-3 styled-contact-card w-100'>
                             <CardBody>
                                 <div className="contact-icon d-flex justify-content-center mb-2">
                                     <i className="fa-solid fa-phone"></i>
@@ -56,7 +56,7 @@ export default function Contact({title}) {
                                     Номер телефону
                                 </CardTitle>
                                 <CardSubtitle tag='h5' className="mb-3">
-                                    <a href="tel:+380672433848" className="contact-link">+38 (067) 243 38 48</a>
+                                    <a href="tel:+380672433848" className="contact-link text-decoration-none position-relative">+38 (067) 243 38 48</a>
                                 </CardSubtitle>
                             </CardBody>
                         </Card>

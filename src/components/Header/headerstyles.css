@@ -152,3 +152,7 @@ span.navbar-toggler-icon {
     color: var(--header-category-link-hovered);
     text-decoration: underline;
 }
+
+.dropdown-item, .dropdown-item:hover {
+    background-color: transparent !important;
+}

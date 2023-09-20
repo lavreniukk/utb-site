@@ -57,13 +57,13 @@ function Header() {
                             'secondaryCategory' in category ? 
                                <Accordion
                                 header={
-                                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link text-decoration-none'>
+                                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>
                                             {categoriesNames.get(category.mainCategory)}
                                         </Link>
                                 } 
                                 body={
                                     category.secondaryCategory.map((secondary, index) => (
-                                    <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link text-decoration-none'>
+                                    <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>
                                         <DropdownItem>
                                             {categoriesNames.get(secondary)}
                                         </DropdownItem>
@@ -72,7 +72,7 @@ function Header() {
                                 key={index}
                             />  
                             :
-                            <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link text-decoration-none'>
+                            <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>
                                 <DropdownItem>
                                     {categoriesNames.get(category.mainCategory)}
                                 </DropdownItem>

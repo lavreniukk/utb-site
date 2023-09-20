@@ -6,7 +6,6 @@
 }
 
 .styled-contact-card {
-    width: 100%; 
     max-width: 450px;
     transition: box-shadow 350ms ease-in-out;
 }
@@ -29,10 +28,8 @@
 
 .contact-link {
     white-space: nowrap;
-    text-decoration: none;
     color: var(--contact-link-color);
     transition: color 350ms ease-in;
-    position: relative;
     padding-bottom: 5px;
     font-size: 1.2vmax;
 }
