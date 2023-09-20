@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/MainPage/MainPage";
 import { Layout } from "./layout";
+import Home from "../pages/MainPage/MainPage";
 import Contact from "../pages/ContactPage/Contact";
 import About from "../pages/AboutPage/About";
 import Products from "../pages/ProductsPage/ProductsPage";
