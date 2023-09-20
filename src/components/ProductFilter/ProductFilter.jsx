@@ -14,20 +14,20 @@ function ProductFilter({categories, producers}) {
                 'secondaryCategory' in category ? 
                 <Accordion 
                     header={
-                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>
+                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link text-decoration-none'>
                             {categoriesNames.get(category.mainCategory)}
                         </Link>
                     } 
                     body={
                         category.secondaryCategory.map((secondary, index) => (
-                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>
+                        <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link text-decoration-none'>
                             {categoriesNames.get(secondary)}
                         </Link>
                     ))}
                     key={index}
                 /> 
                 :
-                <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>
+                <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link text-decoration-none'>
                     {categoriesNames.get(category.mainCategory)}
                 </Link>
             ))
@@ -35,7 +35,7 @@ function ProductFilter({categories, producers}) {
         <h3 className='product-filter__header mt-2'>Виробники</h3>
         {
             producers.map((producer, index) => (
-                <Link to={`/products/producer/${producer.producerName}`} key={index} className='product-filter__link'>{producer.producerName}</Link>
+                <Link to={`/products/producer/${producer.producerName}`} key={index} className='product-filter__link text-decoration-none'>{producer.producerName}</Link>
             ))
         }
         </Container>

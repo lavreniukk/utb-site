@@ -6,8 +6,8 @@ import Image from '../Image/Image';
 
 function ProductCard({product, image}) {
   return (
-    <Card className='product-card'>
-        <div className='d-flex justify-content-center align-items-center position-relative product-card__image-wrap'>
+    <Card className='product-card overflow-hidden'>
+        <div className='d-flex justify-content-center align-items-center position-relative overflow-hidden product-card__image-wrap'>
           <Image src={image} title={product.title}/>
         </div>
         <CardBody className='d-flex flex-column'>
@@ -16,7 +16,7 @@ function ProductCard({product, image}) {
               <CardTitle tag='h5' className='product-card__article'>{product.article}</CardTitle>
               <CardTitle tag='h5' className='product-card__article'>{product.producerName}</CardTitle>
             </div>
-            <Link to={`/product/${product.id}`} className='product-card__btn'>Детальніше</Link>
+            <Link to={`/product/${product.id}`} className='product-card__btn text-decoration-none'>Детальніше</Link>
         </CardBody>
     </Card>
   )

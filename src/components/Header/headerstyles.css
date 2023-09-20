@@ -75,13 +75,11 @@ button.dropdown-item:active {
 }
 
 .styled-navlink {
-    text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
     padding-bottom: 5px;
     color: var(--nav-link-color);
     transition: color 350ms ease-in;
-    position: relative;
     text-transform: uppercase;
 }
 

@@ -6,7 +6,6 @@
 .styled-card {
     height: 100%;
     border-radius: 15px !important;
-    overflow: hidden;
     transition: box-shadow 350ms ease-in-out;
 }
 
@@ -29,5 +28,4 @@
 .category-card__image-wrap {
     width: 100%;
     aspect-ratio: 1;
-    overflow: hidden;
 }

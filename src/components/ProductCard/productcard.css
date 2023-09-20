@@ -10,7 +10,6 @@
 .product-card {
     width: 100%;
     margin-bottom: 1.5rem;
-    overflow: hidden;
     transition: box-shadow 350ms ease-in-out;
 }
 
@@ -38,7 +37,6 @@
 .product-card__btn {
     width: fit-content;
     color: white;
-    text-decoration: none;
     padding: 5px 10px;
     background-color: var(--product-card-btn) !important;
     transition: background-color 250ms ease-in-out;
@@ -56,7 +54,6 @@
 .product-card__image-wrap {
     width: 100%;
     aspect-ratio: 1;
-    overflow: hidden;
 }
 
 @media (max-width: 1200px) {

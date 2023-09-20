@@ -18,7 +18,6 @@
 .product-filter__link {
     color: var(--product-filter-link-color);
     font-size: large;
-    text-decoration: none;
 }
 
 .product-filter__link:hover {

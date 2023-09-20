@@ -30,7 +30,7 @@ function Footer() {
                         </p>
                     </Col>
                     <Col className="text-center text-lg-end">
-                        <ul className="footer-links">
+                        <ul className="footer-links m-0 p-0">
                             <li><NavLink to='/' className={setActiveLink}>Головна</NavLink></li>
                             <li><NavLink to='/products' className={setActiveLink}>Продукція</NavLink></li>
                             <li><NavLink to='/aboutus' className={setActiveLink}>Про компанію</NavLink></li>

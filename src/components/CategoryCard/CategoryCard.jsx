@@ -10,8 +10,8 @@ export default function CategoryCard({item, src}) {
   `/products/category/${item.mainCategory}`;
   return (
     <Link className='category-link' to={link}>
-    <Card className='mb-3 styled-card'>
-        <div className='d-flex justify-content-center align-items-center position-relative category-card__image-wrap'>
+    <Card className='mb-3 overflow-hidden styled-card'>
+        <div className='d-flex justify-content-center align-items-center position-relative overflow-hidden category-card__image-wrap'>
           <Image src={src}/>
         </div>
         <CardBody>

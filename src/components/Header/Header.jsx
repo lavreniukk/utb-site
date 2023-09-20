@@ -20,7 +20,7 @@ import categories from '../../constants/productCategories';
 import Accordion from '../Accordion/Accordion';
 import categoriesNames from '../../constants/categoriesNames';
 
-const setActiveLink = ({isActive}) => isActive ? 'styled-navlink styled-navlink-active' : 'styled-navlink styled-navlink-inactive';
+const setActiveLink = ({isActive}) => isActive ? 'styled-navlink position-relative text-decoration-none styled-navlink-active' : 'styled-navlink position-relative text-decoration-none styled-navlink-inactive';
 
 function Header() {
     const [isOpenNav, setIsOpenNav] = useState(false);
@@ -57,13 +57,13 @@ function Header() {
                             'secondaryCategory' in category ? 
                                <Accordion
                                 header={
-                                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link'>
+                                        <Link to={`/products/category/${category.mainCategory}`} className='product-filter__link text-decoration-none'>
                                             {categoriesNames.get(category.mainCategory)}
                                         </Link>
                                 } 
                                 body={
                                     category.secondaryCategory.map((secondary, index) => (
-                                    <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link'>
+                                    <Link to={`/products/category/${category.mainCategory}/${secondary}`} key={index} className='product-filter__link text-decoration-none'>
                                         <DropdownItem>
                                             {categoriesNames.get(secondary)}
                                         </DropdownItem>
@@ -72,7 +72,7 @@ function Header() {
                                 key={index}
                             />  
                             :
-                            <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link'>
+                            <Link to={`/products/category/${category.mainCategory}`} key={index} className='product-filter__link text-decoration-none'>
                                 <DropdownItem>
                                     {categoriesNames.get(category.mainCategory)}
                                 </DropdownItem>
