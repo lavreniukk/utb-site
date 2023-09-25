@@ -8,12 +8,13 @@ import {
     CardSubtitle
 } from "reactstrap";
 import './contactstyles.css';
+import setMetaDescription from "../../utils/setDescription";
 
 export default function Contact({title}) {
     document.title = 'УТБ Ресурс - ' + title;
+    setMetaDescription('Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.');
     
     return (
-        <div>
             <Container className="mb-5">
                 <h1 className="text-center text-uppercase mt-5 mb-5">Контакти</h1>
                 <Row xs="1" md="3">
@@ -64,6 +65,5 @@ export default function Contact({title}) {
                     </Col>
                 </Row>
             </Container>
-        </div>
     );
 }

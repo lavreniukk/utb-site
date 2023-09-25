@@ -10,6 +10,7 @@ import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
 import './productspage.css';
 import Searchbar from '../../components/Searchbar/Searchbar.jsx';
+import setMetaDescription from '../../utils/setDescription.js';
 
 const productsOnPage = 6;
 
@@ -21,6 +22,7 @@ function Products({title}) {
   const [isOpenSideBar, setIsOpenSideBar] = useState(false);
   const { mainCategory, secondaryCategory, producerName } = useParams();
   document.title = 'УТБ Ресурс - ' + title;
+  setMetaDescription('Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.');
 
   useEffect(() => {
     const fetchData = async () => {
