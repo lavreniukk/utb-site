@@ -54,9 +54,9 @@ function About({title}) {
         <h2 className='ps-5 mb-4'>Наші роботи:</h2>
         <div className='parent'>
         {
-          projectsUrls.map((projectImage, index) => (
+          projectPhotos.map((projectImage, index) => (
             <div className={`div${index + 1} d-flex justify-content-center align-items-center position-relative about-page__image-wrap`}>
-              <Image src={projectImage}></Image>
+              <Image src={projectsUrls[index]}></Image>
             </div>
           ))
         }
