@@ -10,7 +10,8 @@ import {
 import './contactstyles.css';
 
 export default function Contact({title}) {
-    document.title = 'УТБ Ресурс - ' + title; 
+    document.title = 'УТБ Ресурс - ' + title;
+    
     return (
         <div>
             <Container className="mb-5">

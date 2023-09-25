@@ -8,6 +8,7 @@ import producerImage from '../../constants/producerImage';
 import categoriesNames from '../../constants/categoriesNames';
 import scrollToTop from '../../utils/scrollToTop.js';
 import { fetchImagesUrls, fetchProductById } from '../../utils/fetchingData';
+import setMetaDescription from '../../utils/setDescription';
 import './productdetail.css';
 
 function ProductDetailPage() {
@@ -15,7 +16,9 @@ function ProductDetailPage() {
     const [imageUrls, setImageUrls] = useState([]);
     const [loading, setLoading] = useState(true);
     const { productId } = useParams();
-
+    document.title = `${product.name} ${product.article}`;
+    setMetaDescription(product.description);
+    
     useEffect(() => {
         const fetchProduct = async () => {
             setLoading(true);
