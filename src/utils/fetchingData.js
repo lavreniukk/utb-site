@@ -14,11 +14,6 @@ const fetchProducts = async () => {
 	try {
 		let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
 
-		//if querries will be too slow. ill try to implement pagination through firebase
-
-		//const offset = (currentPage - 1) * productsOnPage;
-		//queryRef = query(queryRef, limit(productsOnPage), startAt(offset));
-
 		const productsSnapshot = await getDocs(queryRef);
 		const productsData = productsSnapshot.docs.map((doc) => {
 			return {
