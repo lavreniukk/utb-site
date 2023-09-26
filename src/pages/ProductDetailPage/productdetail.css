@@ -50,6 +50,10 @@
 	font-weight: bold;
 }
 
+.product-detail__description {
+	font-size: 18px;
+}
+
 .breadcrumb-item {
 	.product-detail__link {
 		color: var(--product-detail-darkblue);
