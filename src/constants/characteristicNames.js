@@ -129,26 +129,17 @@ const characteristicNames = new Map([
     ['controlPanelWithLockingKey', "Пульт управління з блокуючим ключем"],
     ['support', "Гусак-підтримка"],
     ['handrails', "Поручні"],
-    ['', ""],
-    ['', ""],
+    ['overallWidthTable', "Загальна ширина зі столиком"],
+    ['doubleCastor50', "Подвійне колесо 50мм"],
     ['', ""],
     ['', ""],
 ]);
 
-// length
-// width
 // height
-// mattressBedLength
-// mattressBedWidth
-// spineSectionAngleAdjust
-// hipSectionAngleAdjust
-// mattressSectionAngleAdjust
-// curbWeight - 116 кг
-// maxLoad
-// sectionCount
-// wheelBrakes - в стандарті
-// controlPanelWithLockingKey - в стандарті
-// support - в стандарті
-// handrails - в стандарті
+// width
+// depth
+// overallWidthTable
+// doubleCastor50
+// wheelBrakes
 
 export default characteristicNames;
