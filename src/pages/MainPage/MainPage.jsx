@@ -12,6 +12,7 @@ import {
 } from '../../constants/mainPageConsts';
 import { fetchImagesUrls } from '../../utils/fetchingData';
 import Image from '../../components/Image/Image';
+import scrollToTop from '../../utils/scrollToTop';
 
 export default function Home({ title }) {
 	const [categoriesUrls, setCategoriesUrls] = useState([]);
@@ -27,6 +28,8 @@ export default function Home({ title }) {
 			const newItemsImagesUrls = await fetchImagesUrls(newItems);
 			setNewItemsUrls(newItemsImagesUrls);
 		};
+
+		scrollToTop();
 		fetchMainPageImages();
 	}, []);
 
