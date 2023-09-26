@@ -130,16 +130,7 @@ const characteristicNames = new Map([
     ['support', "Гусак-підтримка"],
     ['handrails', "Поручні"],
     ['overallWidthTable', "Загальна ширина зі столиком"],
-    ['doubleCastor50', "Подвійне колесо 50мм"],
-    ['', ""],
-    ['', ""],
+    ['doubleCastor50', "Подвійні колеса 50мм"],
 ]);
-
-// height
-// width
-// depth
-// overallWidthTable
-// doubleCastor50
-// wheelBrakes
 
 export default characteristicNames;
