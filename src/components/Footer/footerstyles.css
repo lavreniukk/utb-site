@@ -1,57 +1,57 @@
 :root {
-    --footer-bg-color: #479fd6;
-    --footer-text-color: white;
-    --footer-link-active: #4682A4;
-    --footer-link-hover: #22678f;
+	--footer-bg-color: #479fd6;
+	--footer-text-color: white;
+	--footer-link-active: #4682a4;
+	--footer-link-hover: #22678f;
 }
 
 .styled-footer {
-    font-size: 120%;
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
+	font-size: 120%;
+	background-color: var(--footer-bg-color);
+	color: var(--footer-text-color);
 }
 
 .logo-footer {
-    width: 95%;
-    max-width: 225px;
-    min-width: 140px;
+	width: 95%;
+	max-width: 225px;
+	min-width: 140px;
 }
 
 .footer-links {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .footer-link {
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--footer-text-color);
-    transition: color 350ms ease-in-out;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--footer-text-color);
+	transition: color 350ms ease-in-out;
 }
 
 .footer-link-active {
-    color: var(--footer-link-hover);
+	color: var(--footer-link-hover);
 }
 
 .footer-link:hover {
-    color: var(--footer-link-hover);
+	color: var(--footer-link-hover);
 }
 
 hr {
-    width: 70%;
-    background-color: var(--footer-text-color);
-    height: 2px;
+	width: 70%;
+	background-color: var(--footer-text-color);
+	height: 2px;
 }
 
 @media (min-width: 768px) {
-    .logo-footer {
-        width: 55%;
-    }
+	.logo-footer {
+		width: 55%;
+	}
 }
 
 @media (max-width: 767px) {
-    .logo-footer {
-        width: 50%;
-        padding-right: 10px;
-    }
+	.logo-footer {
+		width: 50%;
+		padding-right: 10px;
+	}
 }

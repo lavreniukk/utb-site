@@ -1,31 +1,31 @@
 :root {
-    --link-color: #696969;
-    --link-hovered: #444444;
+	--link-color: #696969;
+	--link-hovered: #444444;
 }
 
 .styled-card {
-    height: 100%;
-    border-radius: 15px !important;
-    transition: box-shadow 350ms ease-in-out;
+	height: 100%;
+	border-radius: 15px !important;
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .styled-card:hover {
-    box-shadow: 0 0 20px var(--link-hovered);
-    transition: box-shadow 350ms ease-in-out;
+	box-shadow: 0 0 20px var(--link-hovered);
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .category-link {
-    color: var(--link-color);
-    font-size: large;
-    text-decoration: none;
+	color: var(--link-color);
+	font-size: large;
+	text-decoration: none;
 }
 
 .category-link:hover {
-    color: var(--link-hovered);
-    text-decoration: underline;
+	color: var(--link-hovered);
+	text-decoration: underline;
 }
 
 .category-card__image-wrap {
-    width: 100%;
-    aspect-ratio: 1;
+	width: 100%;
+	aspect-ratio: 1;
 }

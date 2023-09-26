@@ -1,25 +1,25 @@
 :root {
-    --color-palette-img-border: #a8a8a8;
+	--color-palette-img-border: #a8a8a8;
 }
 .color-card__image-wrapper {
-    border-radius: 50%;
-    border: 1px solid var(--color-palette-img-border);
+	border-radius: 50%;
+	border: 1px solid var(--color-palette-img-border);
 }
 .color-card__image {
-    transition: transform 250ms ease-in-out;
+	transition: transform 250ms ease-in-out;
 }
 .color-card__image:hover {
-    transform: scale(2.5);
+	transform: scale(2.5);
 }
 .color-card__title {
-    font-weight: bold;
+	font-weight: bold;
 }
 .color-palette__mb {
-    margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 @media (max-width: 576px) {
-    .color-palette__mb {
-        margin-bottom: 40px;
-    }
+	.color-palette__mb {
+		margin-bottom: 40px;
+	}
 }

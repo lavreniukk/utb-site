@@ -1,76 +1,76 @@
 :root {
-    --product-card-title: #444444;
-    --product-card-article: #646464;
-    --product-card-shadow: #a0a0a0;
-    --product-card-border: #d2d2d2;
-    --product-card-btn: #479fd6;
-    --product-card-btn-click: #4682A4;
+	--product-card-title: #444444;
+	--product-card-article: #646464;
+	--product-card-shadow: #a0a0a0;
+	--product-card-border: #d2d2d2;
+	--product-card-btn: #479fd6;
+	--product-card-btn-click: #4682a4;
 }
 
 .product-card {
-    width: 100%;
-    margin-bottom: 1.5rem;
-    transition: box-shadow 350ms ease-in-out;
+	width: 100%;
+	margin-bottom: 1.5rem;
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .product-card:hover {
-    box-shadow: 0 0 20px var(--product-card-shadow);
-    transition: box-shadow 350ms ease-in-out;
+	box-shadow: 0 0 20px var(--product-card-shadow);
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .product-card__img {
-    border-radius: 0 !important;
-    border: 1px solid var(--product-card-border)
+	border-radius: 0 !important;
+	border: 1px solid var(--product-card-border);
 }
 
 .product-card__title {
-    color: var(--product-title);
-    margin-bottom: 0.2rem !important;
-    font-size: 1.5rem;
+	color: var(--product-title);
+	margin-bottom: 0.2rem !important;
+	font-size: 1.5rem;
 }
 
 .product-card__article {
-    color: var(--product-card-article);
-    margin-bottom: 1rem !important;
+	color: var(--product-card-article);
+	margin-bottom: 1rem !important;
 }
 
 .product-card__btn {
-    width: fit-content;
-    color: white;
-    padding: 5px 10px;
-    background-color: var(--product-card-btn) !important;
-    transition: background-color 250ms ease-in-out;
-    border: none !important;
-    border-radius: 5px;
+	width: fit-content;
+	color: white;
+	padding: 5px 10px;
+	background-color: var(--product-card-btn) !important;
+	transition: background-color 250ms ease-in-out;
+	border: none !important;
+	border-radius: 5px;
 }
 
 .product-card__btn:hover,
 .product-card__btn:active,
 .product-card__btn:focus {
-    color: white;
-    background-color: var(--product-card-btn-click) !important;
+	color: white;
+	background-color: var(--product-card-btn-click) !important;
 }
 
 .product-card__image-wrap {
-    width: 100%;
-    aspect-ratio: 1;
+	width: 100%;
+	aspect-ratio: 1;
 }
 
 @media (max-width: 1200px) {
 }
 
 @media (max-width: 768px) {
-    .product-card__title {
-        font-size: 1rem;
-    }
+	.product-card__title {
+		font-size: 1rem;
+	}
 }
 
 @media (max-width: 576px) {
-    .product-card {
-        width: 80%;
-        margin-bottom: 1rem;
-    }
-    .product-card__title {
-        font-size: 1.5rem;
-    }
+	.product-card {
+		width: 80%;
+		margin-bottom: 1rem;
+	}
+	.product-card__title {
+		font-size: 1.5rem;
+	}
 }

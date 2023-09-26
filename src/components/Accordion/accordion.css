@@ -1,29 +1,31 @@
 :root {
-    --accordion-arrow: #444444;
+	--accordion-arrow: #444444;
 }
 
 .accordion__container {
-    border: 0 !important;
+	border: 0 !important;
 }
 
 .accordion__header {
-    background-color: transparent !important;
-    padding: 0 !important;
-    border: none !important;
-    cursor: pointer;
+	background-color: transparent !important;
+	padding: 0 !important;
+	border: none !important;
+	cursor: pointer;
 }
 
 .accordion__arrow {
-    margin: 6px 0 0 10px;
-    color: var(--accordion-arrow);
-    transition: transform 250ms ease-in-out, margin 250ms ease-in-out;
+	margin: 6px 0 0 10px;
+	color: var(--accordion-arrow);
+	transition:
+		transform 250ms ease-in-out,
+		margin 250ms ease-in-out;
 }
 
 .arrow_clicked {
-    margin: 0 0 4px 10px;
-    transform: rotateX(180deg);
+	margin: 0 0 4px 10px;
+	transform: rotateX(180deg);
 }
 
 .accordion__body {
-    padding: 0 10px 0 10px !important;
+	padding: 0 10px 0 10px !important;
 }

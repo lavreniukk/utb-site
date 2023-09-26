@@ -1,104 +1,104 @@
 :root {
-    --contact-icon-color: #479fd6;
-    --contact-link-line: #7fcdfa;
-    --contact-link-color: #696969;
-    --contact-link-hovered: #444444;
+	--contact-icon-color: #479fd6;
+	--contact-link-line: #7fcdfa;
+	--contact-link-color: #696969;
+	--contact-link-hovered: #444444;
 }
 
 .styled-contact-card {
-    max-width: 450px;
-    transition: box-shadow 350ms ease-in-out;
+	max-width: 450px;
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .styled-contact-card:hover {
-    box-shadow: 0 0 20px var(--contact-link-hovered);
-    transition: box-shadow 350ms ease-in-out
+	box-shadow: 0 0 20px var(--contact-link-hovered);
+	transition: box-shadow 350ms ease-in-out;
 }
 
 .contact-icon {
-    height: 4.5vmax;
-    font-size: 4.5vmax;
-    color: var(--contact-icon-color);
+	height: 4.5vmax;
+	font-size: 4.5vmax;
+	color: var(--contact-icon-color);
 }
 
 .contact-span {
-    color: var(--contact-link-color);
-    font-size: 1.2vmax;
+	color: var(--contact-link-color);
+	font-size: 1.2vmax;
 }
 
 .contact-link {
-    white-space: nowrap;
-    color: var(--contact-link-color);
-    transition: color 350ms ease-in;
-    padding-bottom: 5px;
-    font-size: 1.2vmax;
+	white-space: nowrap;
+	color: var(--contact-link-color);
+	transition: color 350ms ease-in;
+	padding-bottom: 5px;
+	font-size: 1.2vmax;
 }
 
 .contact-link:hover {
-    color: var(--contact-link-hovered);
-    transition: color 350ms ease-out;
+	color: var(--contact-link-hovered);
+	transition: color 350ms ease-out;
 }
 
 .contact-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--contact-link-line);
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 3px;
+	background-color: var(--contact-link-line);
 
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 350ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 350ms ease-in-out;
 }
 
 .contact-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+	transform: scaleX(1);
+	transform-origin: left;
 }
 
 @media (max-width: 1199px) {
-    .contact-icon {
-        height: 5vmax;
-        font-size: 5vmax;
-    }
+	.contact-icon {
+		height: 5vmax;
+		font-size: 5vmax;
+	}
 
-    .contact-span {
-        font-size: 1.5vmax;
-    }
-    
-    .contact-link {
-        font-size: 1.5vmax;
-    }
+	.contact-span {
+		font-size: 1.5vmax;
+	}
+
+	.contact-link {
+		font-size: 1.5vmax;
+	}
 }
 
 @media (max-width: 991px) {
-    .contact-icon {
-        height: 6vmax;
-        font-size: 6vmax;
-    }
+	.contact-icon {
+		height: 6vmax;
+		font-size: 6vmax;
+	}
 
-    .contact-span {
-        font-size: 2vmax;
-    }
-    
-    .contact-link {
-        font-size: 2vmax;
-    }
+	.contact-span {
+		font-size: 2vmax;
+	}
+
+	.contact-link {
+		font-size: 2vmax;
+	}
 }
 
 @media (max-width: 767px) {
-    .contact-icon {
-        height: 7vmax;
-        font-size: 7vmax;
-    }
+	.contact-icon {
+		height: 7vmax;
+		font-size: 7vmax;
+	}
 
-    .contact-span {
-        font-size: 2.5vmax;
-    }
-    
-    .contact-link {
-        font-size: 2.5vmax;
-    }
+	.contact-span {
+		font-size: 2.5vmax;
+	}
+
+	.contact-link {
+		font-size: 2.5vmax;
+	}
 }

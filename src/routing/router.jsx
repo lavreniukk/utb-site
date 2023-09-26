@@ -1,4 +1,4 @@
-import { RouterProvider } from "react-router-dom";
-import { router } from "./routes.jsx";
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes.jsx';
 
-export const App = () => <RouterProvider router={router}/>;
+export const App = () => <RouterProvider router={router} />;

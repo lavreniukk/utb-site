@@ -1,129 +1,168 @@
 import { getDownloadURL, ref } from 'firebase/storage';
 import { db, storage } from '../firebase/initializer';
-import { collection, doc, getDoc, getDocs, orderBy, query, where } from 'firebase/firestore/lite';
+import {
+	collection,
+	doc,
+	getDoc,
+	getDocs,
+	orderBy,
+	query,
+	where,
+} from 'firebase/firestore/lite';
 
 const fetchProducts = async () => {
-    try {
-      let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
-      
-      //if querries will be too slow. ill try to implement pagination through firebase
-      
-      //const offset = (currentPage - 1) * productsOnPage;
-      //queryRef = query(queryRef, limit(productsOnPage), startAt(offset));
+	try {
+		let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
 
-      const productsSnapshot = await getDocs(queryRef);
-      const productsData = productsSnapshot.docs.map(doc => {
-        return {
-          id: doc.id,
-          ...doc.data()
-        }
-      });
+		//if querries will be too slow. ill try to implement pagination through firebase
 
-      return productsData;
-    } catch (error) {
-      console.error('Error fetching products: ', error);
-      return [];
-    }
-}
+		//const offset = (currentPage - 1) * productsOnPage;
+		//queryRef = query(queryRef, limit(productsOnPage), startAt(offset));
 
-const fetchFilteredProducts = async (mainCategory, secondaryCategory, producerName) => {
-  try {
-    let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
+		const productsSnapshot = await getDocs(queryRef);
+		const productsData = productsSnapshot.docs.map((doc) => {
+			return {
+				id: doc.id,
+				...doc.data(),
+			};
+		});
 
-    if (mainCategory) {
-      queryRef = query(queryRef, where('mainCategory', '==', mainCategory));
-    }
-
-    if (secondaryCategory) {
-      queryRef = query(queryRef, where('secondaryCategory', '==', secondaryCategory));
-    }
-
-    if (producerName) {
-      queryRef = query(queryRef, where('producerName', '==', producerName));
-    }
-
-    const productsSnapshot = await getDocs(queryRef);
-    const productsData = productsSnapshot.docs.map(doc => {
-      return {
-        id: doc.id,
-        ...doc.data()
-      }
-    });
-
-    return productsData;
-  } catch (error) {
-    console.error('Error fetching products: ', error);
-    return [];
-  }
-}
-
-const fetchSearchedProducts = async (searchParameter) => {
-  try {
-    let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
-
-    const productsSnapshot = await getDocs(queryRef);
-    const productsData = productsSnapshot.docs.map(doc => {
-      return {
-        id: doc.id,
-        ...doc.data()
-      }
-    });
-
-    console.log(searchParameter);
-
-    if (searchParameter === '') {
-      return productsData;
-    }
-
-    const formatedSearchParam = searchParameter.toLowerCase().replace(/\s/g, '');
-    console.log(productsData);
-    console.log(productsData.filter(product => 
-      product.name.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam) || 
-      product.article.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam)
-    ));
-
-    return productsData.filter(product => 
-      product.name.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam) || 
-      product.article.toLowerCase().replace(/\s/g, '').includes(formatedSearchParam)
-    );
-  } catch (error) {
-    console.error('Error fetching products: ', error);
-    return [];
-  }
-}
-
-const fetchProductById = async (productId) => {
-  try {
-    let queryRef = query(doc(db, 'products', productId));
-
-    const productSnapshot = await getDoc(queryRef);
-    const productData = { 
-      id: productSnapshot.id,
-      ...productSnapshot.data()
-    };
-
-    return productData;
-  } catch (error) {
-    console.error('Error fetching products: ', error);
-    return {};
-  }
-}
-
-const fetchImagesUrls = async (images) => {
-  const promises = images.map((image) => {
-    if (typeof image === 'object') {
-      return getDownloadURL(ref(storage, image.src));
-    }
-    return getDownloadURL(ref(storage, image));
-  });
-
-  try {
-    const urls = await Promise.all(promises);
-    return urls;
-  } catch (error) {
-    console.error('Error fetching image URLs:', error);
-    return [];
-  }
+		return productsData;
+	} catch (error) {
+		console.error('Error fetching products: ', error);
+		return [];
+	}
 };
 
-export { fetchProducts, fetchFilteredProducts, fetchSearchedProducts, fetchProductById, fetchImagesUrls };
+const fetchFilteredProducts = async (
+	mainCategory,
+	secondaryCategory,
+	producerName,
+) => {
+	try {
+		let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
+
+		if (mainCategory) {
+			queryRef = query(queryRef, where('mainCategory', '==', mainCategory));
+		}
+
+		if (secondaryCategory) {
+			queryRef = query(
+				queryRef,
+				where('secondaryCategory', '==', secondaryCategory),
+			);
+		}
+
+		if (producerName) {
+			queryRef = query(queryRef, where('producerName', '==', producerName));
+		}
+
+		const productsSnapshot = await getDocs(queryRef);
+		const productsData = productsSnapshot.docs.map((doc) => {
+			return {
+				id: doc.id,
+				...doc.data(),
+			};
+		});
+
+		return productsData;
+	} catch (error) {
+		console.error('Error fetching products: ', error);
+		return [];
+	}
+};
+
+const fetchSearchedProducts = async (searchParameter) => {
+	try {
+		let queryRef = query(collection(db, 'products'), orderBy('article', 'asc'));
+
+		const productsSnapshot = await getDocs(queryRef);
+		const productsData = productsSnapshot.docs.map((doc) => {
+			return {
+				id: doc.id,
+				...doc.data(),
+			};
+		});
+
+		console.log(searchParameter);
+
+		if (searchParameter === '') {
+			return productsData;
+		}
+
+		const formatedSearchParam = searchParameter
+			.toLowerCase()
+			.replace(/\s/g, '');
+		console.log(productsData);
+		console.log(
+			productsData.filter(
+				(product) =>
+					product.name
+						.toLowerCase()
+						.replace(/\s/g, '')
+						.includes(formatedSearchParam) ||
+					product.article
+						.toLowerCase()
+						.replace(/\s/g, '')
+						.includes(formatedSearchParam),
+			),
+		);
+
+		return productsData.filter(
+			(product) =>
+				product.name
+					.toLowerCase()
+					.replace(/\s/g, '')
+					.includes(formatedSearchParam) ||
+				product.article
+					.toLowerCase()
+					.replace(/\s/g, '')
+					.includes(formatedSearchParam),
+		);
+	} catch (error) {
+		console.error('Error fetching products: ', error);
+		return [];
+	}
+};
+
+const fetchProductById = async (productId) => {
+	try {
+		let queryRef = query(doc(db, 'products', productId));
+
+		const productSnapshot = await getDoc(queryRef);
+		const productData = {
+			id: productSnapshot.id,
+			...productSnapshot.data(),
+		};
+
+		return productData;
+	} catch (error) {
+		console.error('Error fetching products: ', error);
+		return {};
+	}
+};
+
+const fetchImagesUrls = async (images) => {
+	const promises = images.map((image) => {
+		if (typeof image === 'object') {
+			return getDownloadURL(ref(storage, image.src));
+		}
+		return getDownloadURL(ref(storage, image));
+	});
+
+	try {
+		const urls = await Promise.all(promises);
+		return urls;
+	} catch (error) {
+		console.error('Error fetching image URLs:', error);
+		return [];
+	}
+};
+
+export {
+	fetchProducts,
+	fetchFilteredProducts,
+	fetchSearchedProducts,
+	fetchProductById,
+	fetchImagesUrls,
+};
