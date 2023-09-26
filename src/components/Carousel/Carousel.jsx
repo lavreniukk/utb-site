@@ -5,10 +5,10 @@ import {
 	CarouselControl,
 	CarouselIndicators,
 } from 'reactstrap';
-import './carousel.css';
+import { Link } from 'react-router-dom';
 import { fetchImagesUrls } from '../../utils/fetchingData';
 import Image from '../Image/Image';
-import { Link } from 'react-router-dom';
+import './carousel.css';
 
 export default function CarouselComponent({ carouselItems }) {
 	const [activeSlide, setActiveSlide] = useState(0);

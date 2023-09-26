@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Accordion from '../Accordion/Accordion';
 import { Container } from 'reactstrap';
+import Accordion from '../Accordion/Accordion';
 import categoriesNames from '../../constants/categoriesNames';
 import './productfilter.css';
 

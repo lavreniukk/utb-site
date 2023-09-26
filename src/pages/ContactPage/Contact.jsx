@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
 	Container,
 	Row,
@@ -7,10 +8,9 @@ import {
 	CardTitle,
 	CardSubtitle,
 } from 'reactstrap';
-import './contactstyles.css';
 import setMetaDescription from '../../utils/setDescription';
-import { useEffect } from 'react';
 import scrollToTop from '../../utils/scrollToTop';
+import './contactstyles.css';
 
 export default function Contact({ title }) {
 	document.title = 'УТБ Ресурс - ' + title;

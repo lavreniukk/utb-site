@@ -1,6 +1,6 @@
 import React from 'react';
-import './colorpalette.css';
 import { Col, Container, Row } from 'reactstrap';
+import ColorCard from './ColorCard';
 import {
 	standardUpholsteryColors,
 	prestigeUpholsteryColors,
@@ -9,7 +9,7 @@ import {
 	housingsColors,
 	woodColors,
 } from '../../constants/colorLinks.js';
-import ColorCard from './ColorCard';
+import './colorpalette.css';
 
 function ColorPalette() {
 	return (

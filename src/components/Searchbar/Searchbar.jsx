@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { InputGroup, Input, InputGroupText } from 'reactstrap';
-import './searchbarstyles.css';
 import { fetchSearchedProducts } from '../../utils/fetchingData';
+import './searchbarstyles.css';
 
 function Searchbar({ className, setProducts, setLoading, setCurrentPage }) {
 	const [input, setInput] = useState('');

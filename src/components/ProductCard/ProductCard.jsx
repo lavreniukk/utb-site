@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardBody, CardTitle } from 'reactstrap';
-import './productcard.css';
 import { Link } from 'react-router-dom';
 import Image from '../Image/Image';
+import './productcard.css';
 
 function ProductCard({ product, image }) {
 	return (

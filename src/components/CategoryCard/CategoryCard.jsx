@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, CardTitle } from 'reactstrap';
-import './categorycard.css';
 import categoriesNames from '../../constants/categoriesNames';
 import Image from '../Image/Image';
+import './categorycard.css';
 
 export default function CategoryCard({ item, src }) {
 	const link = item.secondaryCategory

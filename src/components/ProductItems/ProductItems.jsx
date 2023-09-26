@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Spinner from '../Spinner/Spinner';
 import { Col, Container, Row } from 'reactstrap';
 import ProductCard from '../ProductCard/ProductCard';
-import './productitems.css';
+import Spinner from '../Spinner/Spinner';
 import { fetchImagesUrls } from '../../utils/fetchingData';
+import './productitems.css';
 
 function ProductItems({ currentProducts, loading }) {
 	const [imagesUrls, setImagesUrls] = useState([]);

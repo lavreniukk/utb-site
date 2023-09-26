@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'reactstrap';
 import CarouselComponent from '../../components/Carousel/Carousel';
-import './mainpagestyles.css';
 import CategoryCard from '../../components/CategoryCard/CategoryCard';
 import Slider from '../../components/Slider/Slider';
-import { Col, Container, Row } from 'reactstrap';
+import Image from '../../components/Image/Image';
 import {
 	sliderImageSrc,
 	popularCategoriesItems,
@@ -11,8 +11,8 @@ import {
 	newItems,
 } from '../../constants/mainPageConsts';
 import { fetchImagesUrls } from '../../utils/fetchingData';
-import Image from '../../components/Image/Image';
 import scrollToTop from '../../utils/scrollToTop';
+import './mainpagestyles.css';
 
 export default function Home({ title }) {
 	const [categoriesUrls, setCategoriesUrls] = useState([]);

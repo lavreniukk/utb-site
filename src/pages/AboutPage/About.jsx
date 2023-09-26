@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardBody, CardTitle, Col, Container, Row } from 'reactstrap';
-import setMetaDescription from '../../utils/setDescription';
 import projectPhotos from '../../constants/projectPhotos';
-import { fetchImagesUrls } from '../../utils/fetchingData';
 import Image from '../../components/Image/Image';
+import { fetchImagesUrls } from '../../utils/fetchingData';
+import setMetaDescription from '../../utils/setDescription';
 import scrollToTop from '../../utils/scrollToTop';
 import './aboutstyles.css';
 

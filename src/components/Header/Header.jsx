@@ -15,10 +15,10 @@ import {
 	DropdownItem,
 } from 'reactstrap';
 import { Link, NavLink } from 'react-router-dom';
-import './headerstyles.css';
 import categories from '../../constants/productCategories';
 import Accordion from '../Accordion/Accordion';
 import categoriesNames from '../../constants/categoriesNames';
+import './headerstyles.css';
 
 const setActiveLink = ({ isActive }) =>
 	isActive

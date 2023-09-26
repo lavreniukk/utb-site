@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Collapse, NavbarToggler } from 'reactstrap';
+import categories from '../../constants/productCategories.js';
+import producers from '../../constants/productProducers.js';
 import ProductItems from '../../components/ProductItems/ProductItems.jsx';
 import Pagination from '../../components/Pagination/Pagination.jsx';
+import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
+import Searchbar from '../../components/Searchbar/Searchbar.jsx';
 import {
 	fetchProducts,
 	fetchFilteredProducts,
 } from '../../utils/fetchingData.js';
-import scrollToTop from '../../utils/scrollToTop.js';
-import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
-import categories from '../../constants/productCategories.js';
-import producers from '../../constants/productProducers.js';
-import './productspage.css';
-import Searchbar from '../../components/Searchbar/Searchbar.jsx';
 import setMetaDescription from '../../utils/setDescription.js';
+import scrollToTop from '../../utils/scrollToTop.js';
+import './productspage.css';
 
 const productsOnPage = 6;
 
