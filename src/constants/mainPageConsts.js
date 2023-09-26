@@ -1,19 +1,19 @@
 const sliderImageSrc = [
 	{
 		link: '/products/producer/Tekno',
-		imageSrc: '/assets/images/logos/tekno-logo.png',
+		imageSrc: '/assets/images/logos/tekno-logo.webp',
 	},
 	{
 		link: '/products/producer/Burmeier',
-		imageSrc: '/assets/images/logos/burmeier-logo.png',
+		imageSrc: '/assets/images/logos/burmeier-logo.webp',
 	},
 	{
 		link: '/products/producer/Dr.Mach',
-		imageSrc: '/assets/images/logos/drmach-logo.png',
+		imageSrc: '/assets/images/logos/drmach-logo.webp',
 	},
 	{
 		link: '/products/producer/WSTECH',
-		imageSrc: '/assets/images/logos/wstech-logo.png',
+		imageSrc: '/assets/images/logos/wstech-logo.webp',
 	},
 ];
 
