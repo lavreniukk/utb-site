@@ -77,6 +77,7 @@ function About({ title }) {
 				<div className="parent">
 					{projectPhotos.map((projectImage, index) => (
 						<div
+							key={index}
 							className={`div${
 								index + 1
 							} d-flex justify-content-center align-items-center position-relative about-page__image-wrap`}

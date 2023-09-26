@@ -36,7 +36,7 @@
 	transition: box-shadow 350ms ease-in-out;
 }
 
-.about-card:hover {
+.about-card:hover, .about-page__image-wrap:hover img {
 	box-shadow: 0 0 20px var(--about-dark-blue);
 	transition: box-shadow 350ms ease-in-out;
 }
@@ -49,6 +49,10 @@
 
 .about-page__card-title {
 	color: var(--about-dark-blue);
+}
+
+.about-page__image-wrap img {
+	transition: box-shadow 350ms ease-in;
 }
 
 .parent {
