@@ -9,12 +9,18 @@ import {
 } from 'reactstrap';
 import './contactstyles.css';
 import setMetaDescription from '../../utils/setDescription';
+import { useEffect } from 'react';
+import scrollToTop from '../../utils/scrollToTop';
 
 export default function Contact({ title }) {
 	document.title = 'УТБ Ресурс - ' + title;
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
 	);
+
+	useEffect(() => {
+		scrollToTop();
+	}, []);
 
 	return (
 		<Container className="mb-5">

@@ -4,6 +4,7 @@ import setMetaDescription from '../../utils/setDescription';
 import projectPhotos from '../../constants/projectPhotos';
 import { fetchImagesUrls } from '../../utils/fetchingData';
 import Image from '../../components/Image/Image';
+import scrollToTop from '../../utils/scrollToTop';
 import './aboutstyles.css';
 
 function About({ title }) {
@@ -18,6 +19,8 @@ function About({ title }) {
 			const projectImagesUrls = await fetchImagesUrls(projectPhotos);
 			setProjectsUrls(projectImagesUrls);
 		};
+
+		scrollToTop();
 		fetchImages();
 	}, []);
 
