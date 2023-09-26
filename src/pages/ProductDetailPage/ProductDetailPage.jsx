@@ -103,7 +103,9 @@ function ProductDetailPage() {
 								style={{ width: '100%', height: '250px', marginBottom: '16px' }}
 							></div>
 						) : (
-							<p className='product-detail__description'>{product.description}</p>
+							<p className="product-detail__description">
+								{product.description}
+							</p>
 						)}
 						<h4 className="blue-left">Виробник</h4>
 						{loading ? (
