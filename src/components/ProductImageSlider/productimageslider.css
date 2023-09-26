@@ -68,8 +68,8 @@
 .fullsreen-slider {
     position: fixed;
     background-color: var(--slider-fs-bg);
-    height: 100%;
-    width: 100%;
+    height: calc(100vh + 1px);
+    width: calc(100vw + 1px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -81,7 +81,7 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 5;
+    z-index: 6;
 }
 .fullsreen-slider .fullsreen-slider__close-btn:hover {
     background-color: var(--slider-fs-close-btn-hover);

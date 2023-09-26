@@ -12,7 +12,7 @@ function Image({src, title, className}) {
             src ? 
             (
                 isImageLoaded ? 
-                <img src={src} alt={title} onLoad={handleImageLoad} className={`styled-image position-absolute w-100 h-100 ${className}`}></img>
+                <img src={src} alt={title} onLoad={handleImageLoad} className={`styled-image ${className}`}></img>
                 :
                 <>
                 <div className='loading-image'>

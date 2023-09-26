@@ -51,7 +51,7 @@ function ProductDetailPage() {
             </Row>
             <Row className='mb-3'>
                 <Col xs="12" sm="12" md="7">
-                    <ProductImageSlider imagesSrcArray={imageUrls}/>
+                    { loading ? <div className='product-detail__skeleton-loading' style={{ width: '60%', aspectRatio: '3/4', margin: '30px auto'}}></div> : <ProductImageSlider imagesSrcArray={imageUrls}/> }
                 </Col>
                 <Col xs="12" sm="12" md="5" className='ps-5 pe-5'>
                     <Row className='mb-3'>
