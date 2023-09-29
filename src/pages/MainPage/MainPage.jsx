@@ -63,7 +63,7 @@ export default function Home({ title }) {
 								Ветеринарні столи WSTECH
 							</h2>
 							<Row
-								className="p-5 position-relative new-items__tables-row"
+								className="ps-5 pe-5 pb-5 pt-3 position-relative new-items__tables-row"
 								xs="1"
 								sm="2"
 								md="3"
