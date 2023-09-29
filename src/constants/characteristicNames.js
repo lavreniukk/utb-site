@@ -146,6 +146,32 @@ const characteristicNames = new Map([
 	['handrails', 'Поручні'],
 	['overallWidthTable', 'Загальна ширина зі столиком'],
 	['doubleCastor50', 'Подвійні колеса 50мм'],
+	//
+	["diagnosAnaesthesia", "Діагностика, анестезія"],
+	["aspirationProbes", "Аспірація, зонди"],
+	["scalpelsKnives", "Скальпелі, ножі"],
+	["scissors", "Ножиці"],
+	["forceps", "Щипці"],
+	["dressingForceps", "Перев'язувальні щипці"],
+	["retractorsSelfRetrainRetractors", "Ретрактори та ретрактори з самопідготовкою"],
+	["sutureInstrument", "Шовні інструменти"],
+	["hemostaticForceps", "Кровоспинні щипці"],
+	["removingBandagesInstruments", "Інструменти для зняття пов'язок"],
+	["boneSurgeryInstruments", "Інструменти для кісткової хірургії"],
+	["microNeuroSurgeryInstruments", "Інструменти для мікро та нейрохірургії"],
+	["thoraxLungSurgeryInstruments", "Інструменти для хірургії грудної клітки та легень"],
+	["intestinalSurgeryInstruments", "Інструменти для кишкової хірургії"],
+	["urologyInstruments", "Інструменти для урології"],
+	["gynaecologyInstruments", "Інструменти для гінекології"],
+	["entInstruments", "ЛОР інструменти"],
+	["autopsyInstruments", "Інструменти для розтину"],
 ]);
+
+/*
+в асортименті
+*/
+/* 
+В асортименті компанії Tekno-Medical понад 40 тисяч найменувань хірургічних інструментів. Високоточний, якісний, відповідний найвищим стандартам за якістю використовуваних матеріалів, хірургічний інструментарів виготовляється не конвеєрним способом, а вручну, що дозволяє експлуатувати його протягом багатьох років."
+*/
 
 export default characteristicNames;
