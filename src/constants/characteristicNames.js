@@ -85,7 +85,7 @@ const characteristicNames = new Map([
 	['handTraction', 'Ручна тяга'],
 	['armrest', 'Підлокітники'],
 	['headrestHeightAdjust', 'Регулювання висоти підголівника'],
-	['headrestSwinging', 'Розгойдування підголівника'],
+	['headrestSwinging', 'Розширення підголівника'],
 	['centralAngleAdjust', 'Регулювання центрального кута'],
 	['heightChoice', 'Висота на вибір'],
 	['sideAngleAdjust', 'Регулювання кута бічного вирізу'],
