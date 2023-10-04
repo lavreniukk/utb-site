@@ -24,6 +24,7 @@ function Products({ title }) {
 	const [currentPage, setCurrentPage] = useState(1);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 	const { mainCategory, secondaryCategory, producerName } = useParams();
+	
 	document.title = 'УТБ Ресурс - ' + title;
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
@@ -44,7 +45,7 @@ function Products({ title }) {
 			} else {
 				setLoading(true);
 				setCurrentPage(1);
-				fetchedProducts = await fetchProducts(); //maybe a change if querries too slow
+				fetchedProducts = await fetchProducts();
 			}
 
 			setProducts(fetchedProducts);
