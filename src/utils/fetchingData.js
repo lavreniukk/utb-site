@@ -9,6 +9,7 @@ import {
 	query,
 	where,
 } from 'firebase/firestore/lite';
+import searchFilter from './searchFilter';
 
 const fetchProducts = async () => {
 	try {
@@ -79,41 +80,11 @@ const fetchSearchedProducts = async (searchParameter) => {
 			};
 		});
 
-		console.log(searchParameter);
-
 		if (searchParameter === '') {
 			return productsData;
 		}
 
-		const formatedSearchParam = searchParameter
-			.toLowerCase()
-			.replace(/\s/g, '');
-		console.log(productsData);
-		console.log(
-			productsData.filter(
-				(product) =>
-					product.name
-						.toLowerCase()
-						.replace(/\s/g, '')
-						.includes(formatedSearchParam) ||
-					product.article
-						.toLowerCase()
-						.replace(/\s/g, '')
-						.includes(formatedSearchParam),
-			),
-		);
-
-		return productsData.filter(
-			(product) =>
-				product.name
-					.toLowerCase()
-					.replace(/\s/g, '')
-					.includes(formatedSearchParam) ||
-				product.article
-					.toLowerCase()
-					.replace(/\s/g, '')
-					.includes(formatedSearchParam),
-		);
+		return searchFilter(productsData, searchParameter);
 	} catch (error) {
 		console.error('Error fetching products: ', error);
 		return [];

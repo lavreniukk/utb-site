@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import queryString from 'query-string';
 import { InputGroup, Input, InputGroupText } from 'reactstrap';
 import { fetchSearchedProducts } from '../../utils/fetchingData';
 import './searchbarstyles.css';
 
+
 function Searchbar({ className, setProducts, setLoading, setCurrentPage }) {
 	const [input, setInput] = useState('');
+	const location = useLocation();
+	const navigate = useNavigate();
+	const queryParams = queryString.parse(location.search);
 
 	const handleKeyPress = (e) => {
 		if (e.key === 'Enter') {
@@ -14,10 +20,18 @@ function Searchbar({ className, setProducts, setLoading, setCurrentPage }) {
 
 	const handleSearch = async () => {
 		setLoading(true);
-		setCurrentPage(1);
-		const searchedProducts = await fetchSearchedProducts(input);
 
-		setProducts(searchedProducts);
+		if (input === '') {
+			navigate(`/products`);
+		} else {
+			const newQueryParams = { ...queryParams, page: 1, search: input };
+			const newSearch = queryString.stringify(newQueryParams);
+			navigate(`/products?${newSearch}`);
+			const searchedProducts = await fetchSearchedProducts(input);
+			setProducts(searchedProducts);
+		}
+
+		setCurrentPage(1);
 		setLoading(false);
 	};
 

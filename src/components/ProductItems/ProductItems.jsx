@@ -21,7 +21,6 @@ function ProductItems({ currentProducts, loading }) {
 		fetchImages();
 	}, [currentProducts]);
 
-	console.log(imagesUrls);
 	if (loading) {
 		return <Spinner />;
 	}

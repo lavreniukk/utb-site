@@ -11,6 +11,7 @@ import Searchbar from '../../components/Searchbar/Searchbar.jsx';
 import {
 	fetchProducts,
 	fetchFilteredProducts,
+	fetchSearchedProducts,
 } from '../../utils/fetchingData.js';
 import setMetaDescription from '../../utils/setDescription.js';
 import scrollToTop from '../../utils/scrollToTop.js';
@@ -45,7 +46,10 @@ function Products({ title }) {
 					secondaryCategory,
 					producerName,
 				);
-			} else {
+			} else if (queryParams.search) {
+				fetchedProducts = await fetchSearchedProducts(queryParams.search);
+			}
+			else {
 				fetchedProducts = await fetchProducts();
 			}
 
@@ -55,7 +59,7 @@ function Products({ title }) {
 
 		scrollToTop();
 		fetchData();
-	}, [mainCategory, secondaryCategory, producerName]);
+	}, [mainCategory, secondaryCategory, producerName, queryParams.search]);
 
 	useEffect(() => {
 		setCurrentPage(parseInt(queryParams.page) || 1);
