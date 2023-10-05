@@ -19,7 +19,7 @@ const sliderImageSrc = [
 
 const carouselItems = [
 	{
-		src: 'images/mainpage/carousel-item-1.jpg',
+		src: 'images/mainpage/carousel-item-1.webp',
 		key: 1,
 		class: 'carousel-item-1',
 		header: 'УТБ Ресурс',
@@ -28,7 +28,7 @@ const carouselItems = [
 		link: '/products',
 	},
 	{
-		src: 'images/mainpage/carousel-item-2.jpg',
+		src: 'images/mainpage/carousel-item-2.webp',
 		key: 2,
 		class: 'carousel-item-2',
 		header: 'УТБ Ресурс',
@@ -37,7 +37,7 @@ const carouselItems = [
 		link: '/products',
 	},
 	{
-		src: 'images/mainpage/carousel-item-3.jpg',
+		src: 'images/mainpage/carousel-item-3.webp',
 		key: 3,
 		class: 'carousel-item-3',
 		header: 'УТБ Ресурс',
