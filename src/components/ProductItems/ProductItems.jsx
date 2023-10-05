@@ -15,7 +15,8 @@ function ProductItems({ currentProducts, loading }) {
 			const images = currentProducts.map((product) => product.imageSrc[0]);
 			const fetchedImages = await fetchImagesUrls(images);
 
-			if (currentProductsRef.current === currentProducts) setImagesUrls(fetchedImages);
+			if (currentProductsRef.current === currentProducts)
+				setImagesUrls(fetchedImages);
 		};
 
 		fetchImages();
@@ -26,8 +27,11 @@ function ProductItems({ currentProducts, loading }) {
 	}
 
 	return (
-		<ProductsContainer currentProducts={currentProducts} imagesUrls={imagesUrls}/>
-	)
+		<ProductsContainer
+			currentProducts={currentProducts}
+			imagesUrls={imagesUrls}
+		/>
+	);
 }
 
 export default ProductItems;

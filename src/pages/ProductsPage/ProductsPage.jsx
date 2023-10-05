@@ -27,9 +27,11 @@ function Products({ title }) {
 	const [products, setProducts] = useState([]);
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [currentPage, setCurrentPage] = useState(parseInt(queryParams.page) || 1);
+	const [currentPage, setCurrentPage] = useState(
+		parseInt(queryParams.page) || 1,
+	);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
-	
+
 	document.title = 'УТБ Ресурс - ' + title;
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
@@ -48,8 +50,7 @@ function Products({ title }) {
 				);
 			} else if (queryParams.search) {
 				fetchedProducts = await fetchSearchedProducts(queryParams.search);
-			}
-			else {
+			} else {
 				fetchedProducts = await fetchProducts();
 			}
 

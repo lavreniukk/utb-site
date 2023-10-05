@@ -1,9 +1,9 @@
-import { Col, Container, Row } from "reactstrap";
-import ProductCard from "../ProductCard/ProductCard";
+import { Col, Container, Row } from 'reactstrap';
+import ProductCard from '../ProductCard/ProductCard';
 
 function ProductsContainer({ currentProducts, imagesUrls }) {
-    return (
-        <Container className="container__products">
+	return (
+		<Container className="container__products">
 			<Row>
 				{currentProducts.length !== 0 ? (
 					currentProducts.map((product, index) => {
@@ -24,7 +24,7 @@ function ProductsContainer({ currentProducts, imagesUrls }) {
 				)}
 			</Row>
 		</Container>
-    )
+	);
 }
 
 export default ProductsContainer;

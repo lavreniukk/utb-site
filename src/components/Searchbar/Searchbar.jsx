@@ -5,7 +5,6 @@ import { InputGroup, Input, InputGroupText } from 'reactstrap';
 import { fetchSearchedProducts } from '../../utils/fetchingData';
 import './searchbarstyles.css';
 
-
 function Searchbar({ className, setProducts, setLoading, setCurrentPage }) {
 	const [input, setInput] = useState('');
 	const location = useLocation();
