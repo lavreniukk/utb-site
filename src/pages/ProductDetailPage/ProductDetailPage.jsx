@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, Col, Container, Row } from 'reactstrap';
 import ProductImageSlider from '../../components/ProductImageSlider/ProductImageSlider';
 import ColorPalette from '../../components/ColorPallete/ColorPalette';
@@ -15,6 +15,7 @@ function ProductDetailPage() {
 	const [product, setProduct] = useState({});
 	const [imageUrls, setImageUrls] = useState([]);
 	const [loading, setLoading] = useState(true);
+	const navigate = useNavigate();
 	const { productId } = useParams();
 	document.title = `${product.name} ${product.article}`;
 	setMetaDescription(product.description);
@@ -43,6 +44,7 @@ function ProductDetailPage() {
 						style={{ width: '35vw', height: '30px' }}
 					></div>
 				) : (
+					<div className='product-detail__upperpanel'>
 					<Breadcrumb>
 						<BreadcrumbItem>
 							<Link className="product-detail__link" to={'/products'}>
@@ -61,6 +63,11 @@ function ProductDetailPage() {
 							{product.name} {product.article}
 						</BreadcrumbItem>
 					</Breadcrumb>
+					<button className="product-detail__back product-detail__link" onClick={() => navigate(-1)}>
+						<i class="fa-solid fa-chevron-left me-2"></i>
+						Попередня сторінка
+					</button>
+					</div>
 				)}
 			</Row>
 			<Row className="mb-3">
