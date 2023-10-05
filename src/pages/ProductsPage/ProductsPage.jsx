@@ -40,7 +40,6 @@ function Products({ title }) {
 
 			if (mainCategory || secondaryCategory || producerName) {
 				setLoading(true);
-				setCurrentPage(1);
 				fetchedProducts = await fetchFilteredProducts(
 					mainCategory,
 					secondaryCategory,
@@ -48,19 +47,19 @@ function Products({ title }) {
 				);
 			} else {
 				setLoading(true);
-				setCurrentPage(1);
 				fetchedProducts = await fetchProducts();
 			}
 
 			setProducts(fetchedProducts);
+			setCurrentPage(1);
 			setLoading(false);
 		};
-
 		scrollToTop();
 		fetchData();
 	}, [mainCategory, secondaryCategory, producerName]);
 
 	useEffect(() => {
+		console.log('page changed', currentPage, products);
 		const indexOfLastProduct = currentPage * productsOnPage;
 		const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
 		setCurrentProducts(products.slice(indexOfFirstProduct, indexOfLastProduct));
