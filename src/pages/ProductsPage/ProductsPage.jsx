@@ -20,14 +20,14 @@ const productsOnPage = 6;
 
 function Products({ title }) {
 	const location = useLocation();
-	const queryParams = queryString.parse(location.search);
 	const navigate = useNavigate();
+	const { mainCategory, secondaryCategory, producerName } = useParams();
+	const queryParams = queryString.parse(location.search);
 	const [products, setProducts] = useState([]);
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [currentPage, setCurrentPage] = useState(parseInt(queryParams.page) || 1);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
-	const { mainCategory, secondaryCategory, producerName } = useParams();
 	
 	document.title = 'УТБ Ресурс - ' + title;
 	setMetaDescription(
@@ -37,29 +37,31 @@ function Products({ title }) {
 	useEffect(() => {
 		const fetchData = async () => {
 			let fetchedProducts;
+			setLoading(true);
 
 			if (mainCategory || secondaryCategory || producerName) {
-				setLoading(true);
 				fetchedProducts = await fetchFilteredProducts(
 					mainCategory,
 					secondaryCategory,
 					producerName,
 				);
 			} else {
-				setLoading(true);
 				fetchedProducts = await fetchProducts();
 			}
 
 			setProducts(fetchedProducts);
-			setCurrentPage(1);
 			setLoading(false);
 		};
+
 		scrollToTop();
 		fetchData();
 	}, [mainCategory, secondaryCategory, producerName]);
 
 	useEffect(() => {
-		console.log('page changed', currentPage, products);
+		setCurrentPage(parseInt(queryParams.page) || 1);
+	}, [queryParams.page]);
+
+	useEffect(() => {
 		const indexOfLastProduct = currentPage * productsOnPage;
 		const indexOfFirstProduct = indexOfLastProduct - productsOnPage;
 		setCurrentProducts(products.slice(indexOfFirstProduct, indexOfLastProduct));
