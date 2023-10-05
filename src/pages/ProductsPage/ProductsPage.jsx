@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import queryString from 'query-string';
 import { Container, Row, Col, Collapse, NavbarToggler } from 'reactstrap';
 import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
@@ -18,10 +19,13 @@ import './productspage.css';
 const productsOnPage = 6;
 
 function Products({ title }) {
+	const location = useLocation();
+	const queryParams = queryString.parse(location.search);
+	const navigate = useNavigate();
 	const [products, setProducts] = useState([]);
 	const [currentProducts, setCurrentProducts] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(parseInt(queryParams.page) || 1);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 	const { mainCategory, secondaryCategory, producerName } = useParams();
 	
@@ -63,6 +67,9 @@ function Products({ title }) {
 	}, [products, currentPage]);
 
 	const handlePaginationClick = (pageIndex) => {
+		const newQueryParams = { ...queryParams, page: pageIndex };
+		const newSearch = queryString.stringify(newQueryParams);
+		navigate(`${location.pathname}?${newSearch}`);
 		setCurrentPage(pageIndex);
 		scrollToTop();
 	};
