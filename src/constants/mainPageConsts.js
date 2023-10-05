@@ -53,7 +53,7 @@ const popularCategoriesItems = [
 		mainCategory: 'gynecological-chairs',
 	},
 	{
-		src: 'images/mainpage/category-tables.jpg',
+		src: 'images/products/tekno-stand.webp',
 		mainCategory: 'minimally-invasive-surgery-equipment',
 	},
 	{
@@ -61,6 +61,11 @@ const popularCategoriesItems = [
 		mainCategory: 'led-lighting-systems',
 	},
 ];
+
+/*
+src: 'images/products/TOM-500.webp',
+mainCategory: 'electrosurgery',
+*/
 
 const newItems = [
 	{
