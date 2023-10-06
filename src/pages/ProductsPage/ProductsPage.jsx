@@ -33,7 +33,7 @@ function Products() {
 	);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 
-	document.title = categoriesNames.get(mainCategory) || 'УТБ Ресурс - ' + producerName;
+	document.title = categoriesNames.get(mainCategory) || (producerName ? 'УТБ Ресурс - ' + producerName : 'УТБ Ресурс - Продукція');
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
 	);
