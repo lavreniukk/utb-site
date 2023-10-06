@@ -62,11 +62,6 @@ const popularCategoriesItems = [
 	},
 ];
 
-/*
-src: 'images/products/TOM-500.webp',
-mainCategory: 'electrosurgery',
-*/
-
 const newItems = [
 	{
 		src: 'images/products/VET-E04-1.webp',

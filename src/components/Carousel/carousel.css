@@ -37,8 +37,8 @@
 }
 
 .carousel-body__text {
-	min-width: fit-content;
-	width: 25vw;
+	width: fit-content;
+	max-width: 25vw;
 	word-wrap: normal;
 	background-color: var(--carousel-transparent-white);
 	padding: 5px 10px;
