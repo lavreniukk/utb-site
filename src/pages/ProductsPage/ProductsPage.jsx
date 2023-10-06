@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import { Container, Row, Col, Collapse, NavbarToggler } from 'reactstrap';
 import categories from '../../constants/productCategories.js';
 import producers from '../../constants/productProducers.js';
+import categoriesNames from '../../constants/categoriesNames.js';
 import ProductItems from '../../components/ProductItems/ProductItems.jsx';
 import Pagination from '../../components/Pagination/Pagination.jsx';
 import ProductFilter from '../../components/ProductFilter/ProductFilter.jsx';
@@ -32,7 +33,7 @@ function Products({ title }) {
 	);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 
-	document.title = 'УТБ Ресурс - ' + title;
+	document.title = categoriesNames.get(mainCategory);
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
 	);

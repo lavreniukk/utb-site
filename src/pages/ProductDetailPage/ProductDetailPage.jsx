@@ -49,29 +49,32 @@ function ProductDetailPage() {
 						style={{ width: '35vw', height: '30px' }}
 					></div>
 				) : (
-					<div className='product-detail__upperpanel'>
-					<Breadcrumb>
-						<BreadcrumbItem>
-							<Link className="product-detail__link" to={'/products'}>
-								Продукція
-							</Link>
-						</BreadcrumbItem>
-						<BreadcrumbItem>
-							<Link
-								className="product-detail__link"
-								to={`/products/category/${product.mainCategory}`}
-							>
-								{categoriesNames.get(product.mainCategory)}
-							</Link>
-						</BreadcrumbItem>
-						<BreadcrumbItem active>
-							{product.name} {product.article}
-						</BreadcrumbItem>
-					</Breadcrumb>
-					<button className="product-detail__back product-detail__link" onClick={() => navigate(-1)}>
-						<i class="fa-solid fa-chevron-left me-2"></i>
-						Попередня сторінка
-					</button>
+					<div className="product-detail__upperpanel">
+						<Breadcrumb>
+							<BreadcrumbItem>
+								<Link className="product-detail__link" to={'/products'}>
+									Продукція
+								</Link>
+							</BreadcrumbItem>
+							<BreadcrumbItem>
+								<Link
+									className="product-detail__link"
+									to={`/products/category/${product.mainCategory}`}
+								>
+									{categoriesNames.get(product.mainCategory)}
+								</Link>
+							</BreadcrumbItem>
+							<BreadcrumbItem active>
+								{product.name} {product.article}
+							</BreadcrumbItem>
+						</Breadcrumb>
+						<button
+							className="product-detail__back product-detail__link"
+							onClick={() => navigate(-1)}
+						>
+							<i class="fa-solid fa-chevron-left me-2"></i>
+							Попередня сторінка
+						</button>
 					</div>
 				)}
 			</Row>
