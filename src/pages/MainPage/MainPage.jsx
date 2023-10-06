@@ -41,7 +41,7 @@ export default function Home({ title }) {
 				<Container>
 					<Row className="d-flex justify-content-center p-3" xs="1" md="3">
 						{popularCategoriesItems.map((item, index) => (
-							<Col key={index}>
+							<Col key={index} className='d-flex'>
 								<CategoryCard item={item} src={categoriesUrls[index]} />
 							</Col>
 						))}
@@ -63,7 +63,7 @@ export default function Home({ title }) {
 								Ветеринарні столи WSTECH
 							</h2>
 							<Row
-								className="ps-5 pe-5 pb-5 pt-3 position-relative new-items__tables-row"
+								className="ps-5 pe-5 pt-3 position-relative new-items__tables-row"
 								xs="1"
 								sm="2"
 								md="3"

@@ -25,11 +25,11 @@
 }
 
 .new-items__tables-row {
+	padding-bottom: 3rem;
 	z-index: 2;
 }
 
 .new-items__image-wrap {
-	overflow: hidden;
 	margin-left: auto;
 	bottom: 0;
 	right: 0;
@@ -39,6 +39,7 @@
 }
 
 .new-items__image-wrap img {
+	padding-top: 25px;
 	-webkit-filter: drop-shadow(10px 10px 15px var(--main-dark-shadow));
 	filter: drop-shadow(10px 10px 15px var(--main-dark-shadow));
 	transition: filter 250ms ease-in-out;
@@ -67,6 +68,9 @@
 @media (max-width: 1200px) {
 	.new-items__image-wrap {
 		width: 60vw !important;
+	}
+	.new-items__image-wrap img {
+		padding-top: 0;
 	}
 }
 

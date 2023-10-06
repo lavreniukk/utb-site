@@ -16,7 +16,7 @@ function Slider({ items }) {
 				loop={true}
 				navigation={true}
 				modules={[Pagination, Navigation]}
-				className="mySwiper p-5 mb-5"
+				className="producerSlider p-5 mb-5"
 				breakpoints={{
 					768: {
 						slidesPerView: 2,

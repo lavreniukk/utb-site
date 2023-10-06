@@ -1,6 +1,7 @@
 .swiper {
 	width: 65%;
 	height: 100%;
+	overflow: hidden;
 }
 
 .swiper-slide {
@@ -17,4 +18,9 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 350ms ease-in-out;
+}
+
+.producerSlider .swiper-slide img:hover {
+	transform: scale(1.2);
 }

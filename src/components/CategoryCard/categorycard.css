@@ -1,10 +1,10 @@
 :root {
 	--link-color: #696969;
 	--link-hovered: #444444;
+	--card-shadow: #2a6285;
 }
 
 .styled-card {
-	height: 100%;
 	border-radius: 15px !important;
 	transition: box-shadow 350ms ease-in-out;
 }
@@ -12,6 +12,10 @@
 .styled-card:hover {
 	box-shadow: 0 0 20px var(--link-hovered);
 	transition: box-shadow 350ms ease-in-out;
+}
+
+.new-items__tables-row .styled-card:hover {
+	box-shadow: 0 0 20px var(--card-shadow);
 }
 
 .category-link {
