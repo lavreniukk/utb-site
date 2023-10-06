@@ -20,7 +20,7 @@ import './productspage.css';
 
 const productsOnPage = 6;
 
-function Products({ title }) {
+function Products() {
 	const location = useLocation();
 	const navigate = useNavigate();
 	const { mainCategory, secondaryCategory, producerName } = useParams();
@@ -33,7 +33,7 @@ function Products({ title }) {
 	);
 	const [isOpenSideBar, setIsOpenSideBar] = useState(false);
 
-	document.title = categoriesNames.get(mainCategory);
+	document.title = categoriesNames.get(mainCategory) || 'УТБ Ресурс - ' + producerName;
 	setMetaDescription(
 		'Компанія “УТБ Ресурс” продуктивно працює на медичному ринку України, здійснюючи постачання та ремонт медичної техніки.',
 	);
