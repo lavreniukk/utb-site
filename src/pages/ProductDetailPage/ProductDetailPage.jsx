@@ -12,13 +12,11 @@ import setMetaDescription from '../../utils/setDescription';
 import './productdetail.css';
 
 function ProductDetailPage() {
+	const navigate = useNavigate();
+	const { productId } = useParams();
 	const [product, setProduct] = useState({});
 	const [imageUrls, setImageUrls] = useState([]);
 	const [loading, setLoading] = useState(true);
-	const navigate = useNavigate();
-	const { productId } = useParams();
-	document.title = `${product.name} ${product.article}`;
-	setMetaDescription(product.description);
 
 	useEffect(() => {
 		const fetchProduct = async () => {
@@ -34,6 +32,13 @@ function ProductDetailPage() {
 		scrollToTop();
 		fetchProduct();
 	}, [productId]);
+
+	useEffect(() => {
+		if (Object.keys(product).length !== 0) {
+			document.title = `${product.name} ${product.article}`;
+			setMetaDescription(product.description);
+		}
+	}, [product]);
 
 	return (
 		<Container className="mt-5">
