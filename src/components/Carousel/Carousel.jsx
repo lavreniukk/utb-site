@@ -84,11 +84,13 @@ export default function CarouselComponent({ carouselItems }) {
 			<CarouselControl
 				direction="prev"
 				directionText="Previous"
+				onClick={(e) => e.target.blur()}
 				onClickHandler={previous}
 			/>
 			<CarouselControl
 				direction="next"
 				directionText="Next"
+				onClick={(e) => e.target.blur()}
 				onClickHandler={next}
 			/>
 		</Carousel>

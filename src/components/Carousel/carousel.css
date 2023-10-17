@@ -38,7 +38,6 @@
 
 .carousel-body__text {
 	width: fit-content;
-	max-width: 25vw;
 	word-wrap: normal;
 	background-color: var(--carousel-transparent-white);
 	padding: 5px 10px;
@@ -91,5 +90,15 @@
 	}
 	.carousel-item-1 {
 		object-position: 30%;
+	}
+	.carousel-body__header {
+		font-size: 8vw;
+	}
+	.carousel-body__text {
+		max-width: 45vw;
+		font-size: 5vw;
+	}
+	.carousel-body__link {
+		font-size: 5vw;
 	}
 }
