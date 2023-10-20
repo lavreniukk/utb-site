@@ -1,3 +1,7 @@
 node_modules
 src/firebase/firebaseConfig.js
 build
+.firebaserc
+firebase.json
+firestore.indexes.jsonfirestore.rules
+storage.rules

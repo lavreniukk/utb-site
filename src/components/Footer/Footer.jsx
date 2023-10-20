@@ -30,12 +30,13 @@ function Footer() {
 					<Col className="text-center ">
 						<i className="fa-solid fa-envelope fa-lg me-2" />
 						<span className="fw-bold"> Електронна пошта:</span>
-						<p>info@utbresurs.com.ua</p>
+						<p>utbresurs.info@gmail.com</p>
 					</Col>
 					<Col className="text-center pb-4">
 						<i className="fa-solid fa-phone fa-lg me-2" />
 						<span className="fw-bold"> Номер телефону:</span>
-						<p>+38 (067) 243 38 48</p>
+						<p className='mb-0'>+38 (067) 243 38 48</p>
+						<p>+38 (099) 715 25 26</p>
 					</Col>
 					<Col className="text-center text-lg-end">
 						<ul className="footer-links m-0 p-0">

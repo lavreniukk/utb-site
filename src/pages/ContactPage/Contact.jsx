@@ -37,7 +37,7 @@ export default function Contact({ title }) {
 							</CardTitle>
 							<CardSubtitle tag="h5" className="mb-3">
 								<span className="contact-span">
-									м Київ, вул. В. Алексухіна 24, оф. 6
+									м Київ, вул. Степана Чобану 24, оф. 6
 								</span>
 							</CardSubtitle>
 						</CardBody>
@@ -54,10 +54,10 @@ export default function Contact({ title }) {
 							</CardTitle>
 							<CardSubtitle tag="h5" className="mb-3">
 								<a
-									href="mailto: info@utbresurs.com.ua"
+									href="mailto: utbresurs.info@gmail.com"
 									className="contact-link text-decoration-none position-relative"
 								>
-									info@utbresurs.com.ua
+									utbresurs.info@gmail.com
 								</a>
 							</CardSubtitle>
 						</CardBody>
@@ -78,6 +78,12 @@ export default function Contact({ title }) {
 									className="contact-link text-decoration-none position-relative"
 								>
 									+38 (067) 243 38 48
+								</a>
+								<a
+									href="tel:+380997152526"
+									className="contact-link text-decoration-none position-relative"
+								>
+									+38 (099) 715 25 26
 								</a>
 							</CardSubtitle>
 						</CardBody>
