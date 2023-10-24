@@ -14,10 +14,10 @@ import { fetchImagesUrls } from '../../utils/fetchingData';
 import scrollToTop from '../../utils/scrollToTop';
 import './mainpagestyles.css';
 
-export default function Home({ title }) {
+export default function Home() {
 	const [categoriesUrls, setCategoriesUrls] = useState([]);
 	const [newItemsUrls, setNewItemsUrls] = useState([]);
-	document.title = 'УТБ Ресурс - ' + title;
+	document.title = 'УТБ Ресурс - Медичне обладнання';
 
 	useEffect(() => {
 		const fetchMainPageImages = async () => {

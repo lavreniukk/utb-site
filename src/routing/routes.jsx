@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
 		element: <Layout />,
 		children: [
 			{
-				element: <Home title={'Головна'} />,
+				element: <Home />,
 				index: true,
 			},
 			{
